@@ -1,0 +1,40 @@
+databaseChangeLog:
+  - changeSet:
+      id: 001
+      author: Rukaiia
+      changes:
+        - createTable:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  type: Long
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+                    unique: true
+              - column:
+                  name: email
+                  type: varchar(255)
+              - column:
+                  name: password
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: enabled
+                  type: boolean
+                  defaultValueBoolean: true
+                  constraints:
+                    nullable: false
+              - column:
+                  name: role_id
+                  type: Long
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_role_id
+                    references: roles(id) ON DELETE CASCADE
+              - column:
+                  name: reset_password_token
+                  type: varchar(255)

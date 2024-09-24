@@ -1,0 +1,535 @@
+2024-09-25T00:41:24.387+06:00  INFO 8660 --- [InstagramLab] [main] c.e.i.InstagramlabApplication            : Starting InstagramlabApplication using Java 21.0.2 with PID 8660 (C:\Users\User\Desktop\instagramlab\target\classes started by User in C:\Users\User\Desktop\instagramlab)
+2024-09-25T00:41:24.397+06:00  INFO 8660 --- [InstagramLab] [main] c.e.i.InstagramlabApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-09-25T00:41:25.323+06:00  INFO 8660 --- [InstagramLab] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25T00:41:25.406+06:00  INFO 8660 --- [InstagramLab] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 70 ms. Found 2 JPA repository interfaces.
+2024-09-25T00:41:25.984+06:00  INFO 8660 --- [InstagramLab] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8089 (http)
+2024-09-25T00:41:25.998+06:00  INFO 8660 --- [InstagramLab] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-25T00:41:25.998+06:00  INFO 8660 --- [InstagramLab] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-09-25T00:41:26.060+06:00  INFO 8660 --- [InstagramLab] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-25T00:41:26.061+06:00  INFO 8660 --- [InstagramLab] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1615 ms
+2024-09-25T00:41:26.217+06:00  INFO 8660 --- [InstagramLab] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-25T00:41:30.179+06:00  INFO 8660 --- [InstagramLab] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:./db/instagram_lab user=ROOT
+2024-09-25T00:41:30.182+06:00  INFO 8660 --- [InstagramLab] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-25T00:41:30.245+06:00  INFO 8660 --- [InstagramLab] [main] liquibase.database                       : Set default schema name to PUBLIC
+2024-09-25T00:41:30.506+06:00  INFO 8660 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/001_create_table_user.yml
+2024-09-25T00:41:30.522+06:00  INFO 8660 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/002_create_table_roles.yml
+2024-09-25T00:41:30.526+06:00  INFO 8660 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/003_insert_into_roles_and_users_tables.sql
+2024-09-25T00:41:30.530+06:00  INFO 8660 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/004_create_table_posts.yaml
+2024-09-25T00:41:30.658+06:00  INFO 8660 --- [InstagramLab] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2024-09-25T00:41:30.782+06:00  INFO 8660 --- [InstagramLab] [main] liquibase.lockservice                    : Successfully acquired change log lock
+2024-09-25T00:41:30.783+06:00  INFO 8660 --- [InstagramLab] [main] liquibase.command                        : Using deploymentId: 7203290783
+2024-09-25T00:41:30.785+06:00  INFO 8660 --- [InstagramLab] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2024-09-25T00:41:30.799+06:00  INFO 8660 --- [InstagramLab] [main] liquibase.ui                             : Running Changeset: db/changelog/initial/004_create_table_posts.yaml::4::Rukaiia
+2024-09-25T00:41:30.808+06:00  INFO 8660 --- [InstagramLab] [main] liquibase.changelog                      : Table posts created
+2024-09-25T00:41:30.817+06:00  INFO 8660 --- [InstagramLab] [main] liquibase.changelog                      : Foreign key constraint added to posts (user_id)
+2024-09-25T00:41:30.817+06:00  INFO 8660 --- [InstagramLab] [main] liquibase.changelog                      : ChangeSet db/changelog/initial/004_create_table_posts.yaml::4::Rukaiia ran successfully in 16ms
+2024-09-25T00:41:30.833+06:00  INFO 8660 --- [InstagramLab] [main] liquibase.util                           : UPDATE SUMMARY
+2024-09-25T00:41:30.834+06:00  INFO 8660 --- [InstagramLab] [main] liquibase.util                           : Run:                          1
+2024-09-25T00:41:30.834+06:00  INFO 8660 --- [InstagramLab] [main] liquibase.util                           : Previously run:               3
+2024-09-25T00:41:30.834+06:00  INFO 8660 --- [InstagramLab] [main] liquibase.util                           : Filtered out:                 0
+2024-09-25T00:41:30.834+06:00  INFO 8660 --- [InstagramLab] [main] liquibase.util                           : -------------------------------
+2024-09-25T00:41:30.834+06:00  INFO 8660 --- [InstagramLab] [main] liquibase.util                           : Total change sets:            4
+2024-09-25T00:41:30.835+06:00  INFO 8660 --- [InstagramLab] [main] liquibase.util                           : Update summary generated
+2024-09-25T00:41:30.838+06:00  INFO 8660 --- [InstagramLab] [main] liquibase.command                        : Update command completed successfully.
+2024-09-25T00:41:30.839+06:00  INFO 8660 --- [InstagramLab] [main] liquibase.ui                             : Liquibase: Update has been successful. Rows affected: 1
+2024-09-25T00:41:30.841+06:00  INFO 8660 --- [InstagramLab] [main] liquibase.lockservice                    : Successfully released change log lock
+2024-09-25T00:41:30.841+06:00  INFO 8660 --- [InstagramLab] [main] liquibase.command                        : Command execution complete
+2024-09-25T00:41:30.935+06:00  INFO 8660 --- [InstagramLab] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-25T00:41:31.037+06:00  INFO 8660 --- [InstagramLab] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-09-25T00:41:31.101+06:00  INFO 8660 --- [InstagramLab] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-25T00:41:31.476+06:00  INFO 8660 --- [InstagramLab] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-25T00:41:32.596+06:00  INFO 8660 --- [InstagramLab] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-25T00:41:32.634+06:00 ERROR 8660 --- [InstagramLab] [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: wrong column type encountered in column [content] in table [posts]; found [character large object (Types#CLOB)], but expecting [text (Types#VARCHAR)]
+2024-09-25T00:41:32.634+06:00  WARN 8660 --- [InstagramLab] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: wrong column type encountered in column [content] in table [posts]; found [character large object (Types#CLOB)], but expecting [text (Types#VARCHAR)]
+2024-09-25T00:41:32.635+06:00  INFO 8660 --- [InstagramLab] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-25T00:41:32.644+06:00  INFO 8660 --- [InstagramLab] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-25T00:41:32.646+06:00  INFO 8660 --- [InstagramLab] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-09-25T00:41:32.659+06:00  INFO 8660 --- [InstagramLab] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-09-25T00:41:32.689+06:00 ERROR 8660 --- [InstagramLab] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: wrong column type encountered in column [content] in table [posts]; found [character large object (Types#CLOB)], but expecting [text (Types#VARCHAR)]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.4.jar:3.3.4]
+	at com.example.instagramlab.InstagramlabApplication.main(InstagramlabApplication.java:10) ~[classes/:na]
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: wrong column type encountered in column [content] in table [posts]; found [character large object (Types#CLOB)], but expecting [text (Types#VARCHAR)]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421) ~[spring-orm-6.1.13.jar:6.1.13]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.13.jar:6.1.13]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.1.13.jar:6.1.13]
+	... 15 common frames omitted
+Caused by: org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: wrong column type encountered in column [content] in table [posts]; found [character large object (Types#CLOB)], but expecting [text (Types#VARCHAR)]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.validateColumnType(AbstractSchemaValidator.java:168) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.validateTable(AbstractSchemaValidator.java:155) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.tool.schema.internal.GroupedSchemaValidatorImpl.validateTables(GroupedSchemaValidatorImpl.java:46) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.performValidation(AbstractSchemaValidator.java:98) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.doValidation(AbstractSchemaValidator.java:76) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:289) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:322) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:457) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1506) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.1.13.jar:6.1.13]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.1.13.jar:6.1.13]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.13.jar:6.1.13]
+	... 19 common frames omitted
+
+2024-09-25T00:43:23.622+06:00  INFO 12464 --- [InstagramLab] [main] c.e.i.InstagramlabApplication            : Starting InstagramlabApplication using Java 21.0.2 with PID 12464 (C:\Users\User\Desktop\instagramlab\target\classes started by User in C:\Users\User\Desktop\instagramlab)
+2024-09-25T00:43:23.624+06:00  INFO 12464 --- [InstagramLab] [main] c.e.i.InstagramlabApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-09-25T00:43:24.409+06:00  INFO 12464 --- [InstagramLab] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25T00:43:24.471+06:00  INFO 12464 --- [InstagramLab] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 2 JPA repository interfaces.
+2024-09-25T00:43:24.985+06:00  INFO 12464 --- [InstagramLab] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8089 (http)
+2024-09-25T00:43:24.999+06:00  INFO 12464 --- [InstagramLab] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-25T00:43:24.999+06:00  INFO 12464 --- [InstagramLab] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-09-25T00:43:25.061+06:00  INFO 12464 --- [InstagramLab] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-25T00:43:25.061+06:00  INFO 12464 --- [InstagramLab] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1394 ms
+2024-09-25T00:43:25.189+06:00  INFO 12464 --- [InstagramLab] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-25T00:43:25.515+06:00  INFO 12464 --- [InstagramLab] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:./db/instagram_lab user=ROOT
+2024-09-25T00:43:25.517+06:00  INFO 12464 --- [InstagramLab] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-25T00:43:25.578+06:00  INFO 12464 --- [InstagramLab] [main] liquibase.database                       : Set default schema name to PUBLIC
+2024-09-25T00:43:25.830+06:00  INFO 12464 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/001_create_table_user.yml
+2024-09-25T00:43:25.847+06:00  INFO 12464 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/002_create_table_roles.yml
+2024-09-25T00:43:25.851+06:00  INFO 12464 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/003_insert_into_roles_and_users_tables.sql
+2024-09-25T00:43:25.854+06:00  INFO 12464 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/004_create_table_posts.yaml
+2024-09-25T00:43:25.986+06:00  INFO 12464 --- [InstagramLab] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2024-09-25T00:43:26.030+06:00  INFO 12464 --- [InstagramLab] [main] liquibase.changelog                      : Change failed validation!
+2024-09-25T00:43:26.032+06:00  INFO 12464 --- [InstagramLab] [main] liquibase.command                        : Logging exception.
+2024-09-25T00:43:26.033+06:00  INFO 12464 --- [InstagramLab] [main] liquibase.ui                             : ERROR: Exception Details
+2024-09-25T00:43:26.033+06:00  INFO 12464 --- [InstagramLab] [main] liquibase.ui                             : ERROR: Exception Primary Class:  ValidationFailedException
+2024-09-25T00:43:26.033+06:00  INFO 12464 --- [InstagramLab] [main] liquibase.ui                             : ERROR: Exception Primary Reason:  Validation Failed:
+     1 changesets check sum
+          db/changelog/initial/004_create_table_posts.yaml::4::Rukaiia was: 9:193b1d0b1bc78c83195e581ad8a1748a but is now: 9:9b8ccb303a4692a4b4e8db832c8f995b
+
+2024-09-25T00:43:26.033+06:00  INFO 12464 --- [InstagramLab] [main] liquibase.ui                             : ERROR: Exception Primary Source:  4.28.0
+2024-09-25T00:43:26.034+06:00  INFO 12464 --- [InstagramLab] [main] liquibase.command                        : Command execution complete
+2024-09-25T00:43:26.036+06:00  WARN 12464 --- [InstagramLab] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'liquibase' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.CommandExecutionException: liquibase.exception.ValidationFailedException: Validation Failed:
+     1 changesets check sum
+          db/changelog/initial/004_create_table_posts.yaml::4::Rukaiia was: 9:193b1d0b1bc78c83195e581ad8a1748a but is now: 9:9b8ccb303a4692a4b4e8db832c8f995b
+
+2024-09-25T00:43:26.037+06:00  INFO 12464 --- [InstagramLab] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-25T00:43:26.245+06:00  INFO 12464 --- [InstagramLab] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-25T00:43:26.248+06:00  INFO 12464 --- [InstagramLab] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-09-25T00:43:26.261+06:00  INFO 12464 --- [InstagramLab] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-09-25T00:43:26.282+06:00 ERROR 12464 --- [InstagramLab] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'liquibase' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.CommandExecutionException: liquibase.exception.ValidationFailedException: Validation Failed:
+     1 changesets check sum
+          db/changelog/initial/004_create_table_posts.yaml::4::Rukaiia was: 9:193b1d0b1bc78c83195e581ad8a1748a but is now: 9:9b8ccb303a4692a4b4e8db832c8f995b
+
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:326) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.4.jar:3.3.4]
+	at com.example.instagramlab.InstagramlabApplication.main(InstagramlabApplication.java:10) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.CommandExecutionException: liquibase.exception.ValidationFailedException: Validation Failed:
+     1 changesets check sum
+          db/changelog/initial/004_create_table_posts.yaml::4::Rukaiia was: 9:193b1d0b1bc78c83195e581ad8a1748a but is now: 9:9b8ccb303a4692a4b4e8db832c8f995b
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313) ~[spring-beans-6.1.13.jar:6.1.13]
+	... 10 common frames omitted
+Caused by: liquibase.exception.UnexpectedLiquibaseException: liquibase.exception.CommandExecutionException: liquibase.exception.ValidationFailedException: Validation Failed:
+     1 changesets check sum
+          db/changelog/initial/004_create_table_posts.yaml::4::Rukaiia was: 9:193b1d0b1bc78c83195e581ad8a1748a but is now: 9:9b8ccb303a4692a4b4e8db832c8f995b
+
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:267) ~[liquibase-core-4.28.0.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.1.13.jar:6.1.13]
+	... 17 common frames omitted
+Caused by: liquibase.exception.CommandExecutionException: liquibase.exception.ValidationFailedException: Validation Failed:
+     1 changesets check sum
+          db/changelog/initial/004_create_table_posts.yaml::4::Rukaiia was: 9:193b1d0b1bc78c83195e581ad8a1748a but is now: 9:9b8ccb303a4692a4b4e8db832c8f995b
+
+	at liquibase.command.CommandScope.execute(CommandScope.java:257) ~[liquibase-core-4.28.0.jar:na]
+	at liquibase.Liquibase.lambda$update$0(Liquibase.java:245) ~[liquibase-core-4.28.0.jar:na]
+	at liquibase.Scope.lambda$child$0(Scope.java:191) ~[liquibase-core-4.28.0.jar:na]
+	at liquibase.Scope.child(Scope.java:200) ~[liquibase-core-4.28.0.jar:na]
+	at liquibase.Scope.child(Scope.java:190) ~[liquibase-core-4.28.0.jar:na]
+	at liquibase.Scope.child(Scope.java:169) ~[liquibase-core-4.28.0.jar:na]
+	at liquibase.Liquibase.runInScope(Liquibase.java:1436) ~[liquibase-core-4.28.0.jar:na]
+	at liquibase.Liquibase.update(Liquibase.java:234) ~[liquibase-core-4.28.0.jar:na]
+	at liquibase.Liquibase.update(Liquibase.java:212) ~[liquibase-core-4.28.0.jar:na]
+	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:305) ~[liquibase-core-4.28.0.jar:na]
+	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:257) ~[liquibase-core-4.28.0.jar:na]
+	at liquibase.Scope.lambda$child$0(Scope.java:191) ~[liquibase-core-4.28.0.jar:na]
+	at liquibase.Scope.child(Scope.java:200) ~[liquibase-core-4.28.0.jar:na]
+	at liquibase.Scope.child(Scope.java:190) ~[liquibase-core-4.28.0.jar:na]
+	at liquibase.Scope.child(Scope.java:169) ~[liquibase-core-4.28.0.jar:na]
+	at liquibase.Scope.child(Scope.java:257) ~[liquibase-core-4.28.0.jar:na]
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:250) ~[liquibase-core-4.28.0.jar:na]
+	... 19 common frames omitted
+Caused by: liquibase.exception.ValidationFailedException: Validation Failed:
+     1 changesets check sum
+          db/changelog/initial/004_create_table_posts.yaml::4::Rukaiia was: 9:193b1d0b1bc78c83195e581ad8a1748a but is now: 9:9b8ccb303a4692a4b4e8db832c8f995b
+
+	at liquibase.changelog.DatabaseChangeLog.validate(DatabaseChangeLog.java:389) ~[liquibase-core-4.28.0.jar:na]
+	at liquibase.command.core.helpers.DatabaseChangelogCommandStep.run(DatabaseChangelogCommandStep.java:92) ~[liquibase-core-4.28.0.jar:na]
+	at liquibase.command.CommandScope.execute(CommandScope.java:219) ~[liquibase-core-4.28.0.jar:na]
+	... 35 common frames omitted
+
+2024-09-25T00:44:57.561+06:00  INFO 13572 --- [InstagramLab] [main] c.e.i.InstagramlabApplication            : Starting InstagramlabApplication using Java 21.0.2 with PID 13572 (C:\Users\User\Desktop\instagramlab\target\classes started by User in C:\Users\User\Desktop\instagramlab)
+2024-09-25T00:44:57.563+06:00  INFO 13572 --- [InstagramLab] [main] c.e.i.InstagramlabApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-09-25T00:44:58.407+06:00  INFO 13572 --- [InstagramLab] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25T00:44:58.469+06:00  INFO 13572 --- [InstagramLab] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 2 JPA repository interfaces.
+2024-09-25T00:44:59.003+06:00  INFO 13572 --- [InstagramLab] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8089 (http)
+2024-09-25T00:44:59.019+06:00  INFO 13572 --- [InstagramLab] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-25T00:44:59.019+06:00  INFO 13572 --- [InstagramLab] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-09-25T00:44:59.078+06:00  INFO 13572 --- [InstagramLab] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-25T00:44:59.079+06:00  INFO 13572 --- [InstagramLab] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1463 ms
+2024-09-25T00:44:59.217+06:00  INFO 13572 --- [InstagramLab] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-25T00:44:59.535+06:00  INFO 13572 --- [InstagramLab] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:./db/instagram_lab user=ROOT
+2024-09-25T00:44:59.537+06:00  INFO 13572 --- [InstagramLab] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-25T00:44:59.594+06:00  INFO 13572 --- [InstagramLab] [main] liquibase.database                       : Set default schema name to PUBLIC
+2024-09-25T00:44:59.857+06:00  INFO 13572 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/001_create_table_user.yml
+2024-09-25T00:44:59.872+06:00  INFO 13572 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/002_create_table_roles.yml
+2024-09-25T00:44:59.875+06:00  INFO 13572 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/003_insert_into_roles_and_users_tables.sql
+2024-09-25T00:44:59.878+06:00  INFO 13572 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/004_create_table_posts.yaml
+2024-09-25T00:44:59.893+06:00  INFO 13572 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/005_delete_table.yaml
+2024-09-25T00:45:00.005+06:00  INFO 13572 --- [InstagramLab] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2024-09-25T00:45:00.087+06:00  INFO 13572 --- [InstagramLab] [main] liquibase.lockservice                    : Successfully acquired change log lock
+2024-09-25T00:45:00.089+06:00  INFO 13572 --- [InstagramLab] [main] liquibase.command                        : Using deploymentId: 7203500089
+2024-09-25T00:45:00.093+06:00  INFO 13572 --- [InstagramLab] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2024-09-25T00:45:00.101+06:00  INFO 13572 --- [InstagramLab] [main] liquibase.ui                             : Running Changeset: db/changelog/initial/005_delete_table.yaml::delete-posts-table::Rukaiia
+2024-09-25T00:45:00.111+06:00  INFO 13572 --- [InstagramLab] [main] liquibase.changelog                      : Table posts dropped
+2024-09-25T00:45:00.111+06:00  INFO 13572 --- [InstagramLab] [main] liquibase.changelog                      : ChangeSet db/changelog/initial/005_delete_table.yaml::delete-posts-table::Rukaiia ran successfully in 9ms
+2024-09-25T00:45:00.126+06:00  INFO 13572 --- [InstagramLab] [main] liquibase.util                           : UPDATE SUMMARY
+2024-09-25T00:45:00.127+06:00  INFO 13572 --- [InstagramLab] [main] liquibase.util                           : Run:                          1
+2024-09-25T00:45:00.127+06:00  INFO 13572 --- [InstagramLab] [main] liquibase.util                           : Previously run:               4
+2024-09-25T00:45:00.127+06:00  INFO 13572 --- [InstagramLab] [main] liquibase.util                           : Filtered out:                 0
+2024-09-25T00:45:00.127+06:00  INFO 13572 --- [InstagramLab] [main] liquibase.util                           : -------------------------------
+2024-09-25T00:45:00.127+06:00  INFO 13572 --- [InstagramLab] [main] liquibase.util                           : Total change sets:            5
+2024-09-25T00:45:00.128+06:00  INFO 13572 --- [InstagramLab] [main] liquibase.util                           : Update summary generated
+2024-09-25T00:45:00.131+06:00  INFO 13572 --- [InstagramLab] [main] liquibase.command                        : Update command completed successfully.
+2024-09-25T00:45:00.131+06:00  INFO 13572 --- [InstagramLab] [main] liquibase.ui                             : Liquibase: Update has been successful. Rows affected: 1
+2024-09-25T00:45:00.134+06:00  INFO 13572 --- [InstagramLab] [main] liquibase.lockservice                    : Successfully released change log lock
+2024-09-25T00:45:00.136+06:00  INFO 13572 --- [InstagramLab] [main] liquibase.command                        : Command execution complete
+2024-09-25T00:45:00.231+06:00  INFO 13572 --- [InstagramLab] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-25T00:45:00.289+06:00  INFO 13572 --- [InstagramLab] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-09-25T00:45:00.337+06:00  INFO 13572 --- [InstagramLab] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-25T00:45:00.690+06:00  INFO 13572 --- [InstagramLab] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-25T00:45:01.813+06:00  INFO 13572 --- [InstagramLab] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-25T00:45:01.850+06:00 ERROR 13572 --- [InstagramLab] [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing table [posts]
+2024-09-25T00:45:01.851+06:00  WARN 13572 --- [InstagramLab] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing table [posts]
+2024-09-25T00:45:01.851+06:00  INFO 13572 --- [InstagramLab] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-25T00:45:02.058+06:00  INFO 13572 --- [InstagramLab] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-25T00:45:02.060+06:00  INFO 13572 --- [InstagramLab] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-09-25T00:45:02.073+06:00  INFO 13572 --- [InstagramLab] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-09-25T00:45:02.093+06:00 ERROR 13572 --- [InstagramLab] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing table [posts]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.4.jar:3.3.4]
+	at com.example.instagramlab.InstagramlabApplication.main(InstagramlabApplication.java:10) ~[classes/:na]
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing table [posts]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421) ~[spring-orm-6.1.13.jar:6.1.13]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.13.jar:6.1.13]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.1.13.jar:6.1.13]
+	... 15 common frames omitted
+Caused by: org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing table [posts]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.validateTable(AbstractSchemaValidator.java:135) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.tool.schema.internal.GroupedSchemaValidatorImpl.validateTables(GroupedSchemaValidatorImpl.java:46) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.performValidation(AbstractSchemaValidator.java:98) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.doValidation(AbstractSchemaValidator.java:76) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:289) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:322) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:457) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1506) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.1.13.jar:6.1.13]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.1.13.jar:6.1.13]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.13.jar:6.1.13]
+	... 19 common frames omitted
+
+2024-09-25T00:45:38.563+06:00  INFO 2188 --- [InstagramLab] [main] c.e.i.InstagramlabApplication            : Starting InstagramlabApplication using Java 21.0.2 with PID 2188 (C:\Users\User\Desktop\instagramlab\target\classes started by User in C:\Users\User\Desktop\instagramlab)
+2024-09-25T00:45:38.566+06:00  INFO 2188 --- [InstagramLab] [main] c.e.i.InstagramlabApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-09-25T00:45:39.353+06:00  INFO 2188 --- [InstagramLab] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25T00:45:39.409+06:00  INFO 2188 --- [InstagramLab] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 2 JPA repository interfaces.
+2024-09-25T00:45:39.926+06:00  INFO 2188 --- [InstagramLab] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8089 (http)
+2024-09-25T00:45:39.940+06:00  INFO 2188 --- [InstagramLab] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-25T00:45:39.940+06:00  INFO 2188 --- [InstagramLab] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-09-25T00:45:40.002+06:00  INFO 2188 --- [InstagramLab] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-25T00:45:40.002+06:00  INFO 2188 --- [InstagramLab] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1390 ms
+2024-09-25T00:45:40.131+06:00  INFO 2188 --- [InstagramLab] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-25T00:45:40.427+06:00  INFO 2188 --- [InstagramLab] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:./db/instagram_lab user=ROOT
+2024-09-25T00:45:40.430+06:00  INFO 2188 --- [InstagramLab] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-25T00:45:40.489+06:00  INFO 2188 --- [InstagramLab] [main] liquibase.database                       : Set default schema name to PUBLIC
+2024-09-25T00:45:40.745+06:00  INFO 2188 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/001_create_table_user.yml
+2024-09-25T00:45:40.760+06:00  INFO 2188 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/002_create_table_roles.yml
+2024-09-25T00:45:40.763+06:00  INFO 2188 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/003_insert_into_roles_and_users_tables.sql
+2024-09-25T00:45:40.766+06:00  INFO 2188 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/004_create_table_posts.yaml
+2024-09-25T00:45:40.771+06:00  INFO 2188 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/005_delete_table.yaml
+2024-09-25T00:45:40.773+06:00  INFO 2188 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/006_create_new_table_posts.yaml
+2024-09-25T00:45:40.891+06:00  INFO 2188 --- [InstagramLab] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2024-09-25T00:45:41.011+06:00  INFO 2188 --- [InstagramLab] [main] liquibase.lockservice                    : Successfully acquired change log lock
+2024-09-25T00:45:41.012+06:00  INFO 2188 --- [InstagramLab] [main] liquibase.command                        : Using deploymentId: 7203541011
+2024-09-25T00:45:41.014+06:00  INFO 2188 --- [InstagramLab] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2024-09-25T00:45:41.028+06:00  INFO 2188 --- [InstagramLab] [main] liquibase.ui                             : Running Changeset: db/changelog/initial/006_create_new_table_posts.yaml::4::Rukaiia
+2024-09-25T00:45:41.037+06:00  INFO 2188 --- [InstagramLab] [main] liquibase.changelog                      : Table posts created
+2024-09-25T00:45:41.047+06:00  INFO 2188 --- [InstagramLab] [main] liquibase.changelog                      : Foreign key constraint added to posts (user_id)
+2024-09-25T00:45:41.048+06:00  INFO 2188 --- [InstagramLab] [main] liquibase.changelog                      : ChangeSet db/changelog/initial/006_create_new_table_posts.yaml::4::Rukaiia ran successfully in 17ms
+2024-09-25T00:45:41.064+06:00  INFO 2188 --- [InstagramLab] [main] liquibase.util                           : UPDATE SUMMARY
+2024-09-25T00:45:41.064+06:00  INFO 2188 --- [InstagramLab] [main] liquibase.util                           : Run:                          1
+2024-09-25T00:45:41.064+06:00  INFO 2188 --- [InstagramLab] [main] liquibase.util                           : Previously run:               5
+2024-09-25T00:45:41.064+06:00  INFO 2188 --- [InstagramLab] [main] liquibase.util                           : Filtered out:                 0
+2024-09-25T00:45:41.064+06:00  INFO 2188 --- [InstagramLab] [main] liquibase.util                           : -------------------------------
+2024-09-25T00:45:41.065+06:00  INFO 2188 --- [InstagramLab] [main] liquibase.util                           : Total change sets:            6
+2024-09-25T00:45:41.066+06:00  INFO 2188 --- [InstagramLab] [main] liquibase.util                           : Update summary generated
+2024-09-25T00:45:41.070+06:00  INFO 2188 --- [InstagramLab] [main] liquibase.command                        : Update command completed successfully.
+2024-09-25T00:45:41.070+06:00  INFO 2188 --- [InstagramLab] [main] liquibase.ui                             : Liquibase: Update has been successful. Rows affected: 1
+2024-09-25T00:45:41.073+06:00  INFO 2188 --- [InstagramLab] [main] liquibase.lockservice                    : Successfully released change log lock
+2024-09-25T00:45:41.074+06:00  INFO 2188 --- [InstagramLab] [main] liquibase.command                        : Command execution complete
+2024-09-25T00:45:41.143+06:00  INFO 2188 --- [InstagramLab] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-25T00:45:41.195+06:00  INFO 2188 --- [InstagramLab] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-09-25T00:45:41.231+06:00  INFO 2188 --- [InstagramLab] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-25T00:45:41.575+06:00  INFO 2188 --- [InstagramLab] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-25T00:45:42.602+06:00  INFO 2188 --- [InstagramLab] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-25T00:45:42.632+06:00 ERROR 2188 --- [InstagramLab] [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing column [created_date] in table [posts]
+2024-09-25T00:45:42.633+06:00  WARN 2188 --- [InstagramLab] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing column [created_date] in table [posts]
+2024-09-25T00:45:42.633+06:00  INFO 2188 --- [InstagramLab] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-25T00:45:42.841+06:00  INFO 2188 --- [InstagramLab] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-25T00:45:42.843+06:00  INFO 2188 --- [InstagramLab] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-09-25T00:45:42.857+06:00  INFO 2188 --- [InstagramLab] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-09-25T00:45:42.877+06:00 ERROR 2188 --- [InstagramLab] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing column [created_date] in table [posts]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.4.jar:3.3.4]
+	at com.example.instagramlab.InstagramlabApplication.main(InstagramlabApplication.java:10) ~[classes/:na]
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing column [created_date] in table [posts]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421) ~[spring-orm-6.1.13.jar:6.1.13]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.13.jar:6.1.13]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.1.13.jar:6.1.13]
+	... 15 common frames omitted
+Caused by: org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing column [created_date] in table [posts]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.validateTable(AbstractSchemaValidator.java:148) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.tool.schema.internal.GroupedSchemaValidatorImpl.validateTables(GroupedSchemaValidatorImpl.java:46) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.performValidation(AbstractSchemaValidator.java:98) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.doValidation(AbstractSchemaValidator.java:76) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:289) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:322) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:457) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1506) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.1.13.jar:6.1.13]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.1.13.jar:6.1.13]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.13.jar:6.1.13]
+	... 19 common frames omitted
+
+2024-09-25T00:47:44.000+06:00  INFO 8696 --- [InstagramLab] [main] c.e.i.InstagramlabApplication            : Starting InstagramlabApplication using Java 21.0.2 with PID 8696 (C:\Users\User\Desktop\instagramlab\target\classes started by User in C:\Users\User\Desktop\instagramlab)
+2024-09-25T00:47:44.002+06:00  INFO 8696 --- [InstagramLab] [main] c.e.i.InstagramlabApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-09-25T00:47:44.782+06:00  INFO 8696 --- [InstagramLab] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25T00:47:44.842+06:00  INFO 8696 --- [InstagramLab] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 2 JPA repository interfaces.
+2024-09-25T00:47:45.352+06:00  INFO 8696 --- [InstagramLab] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8089 (http)
+2024-09-25T00:47:45.366+06:00  INFO 8696 --- [InstagramLab] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-25T00:47:45.366+06:00  INFO 8696 --- [InstagramLab] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-09-25T00:47:45.427+06:00  INFO 8696 --- [InstagramLab] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-25T00:47:45.427+06:00  INFO 8696 --- [InstagramLab] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1382 ms
+2024-09-25T00:47:45.558+06:00  INFO 8696 --- [InstagramLab] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-25T00:47:45.871+06:00  INFO 8696 --- [InstagramLab] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:./db/instagram_lab user=ROOT
+2024-09-25T00:47:45.874+06:00  INFO 8696 --- [InstagramLab] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-25T00:47:45.929+06:00  INFO 8696 --- [InstagramLab] [main] liquibase.database                       : Set default schema name to PUBLIC
+2024-09-25T00:47:46.179+06:00  INFO 8696 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/001_create_table_user.yml
+2024-09-25T00:47:46.192+06:00  INFO 8696 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/002_create_table_roles.yml
+2024-09-25T00:47:46.195+06:00  INFO 8696 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/003_insert_into_roles_and_users_tables.sql
+2024-09-25T00:47:46.199+06:00  INFO 8696 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/004_create_table_posts.yaml
+2024-09-25T00:47:46.203+06:00  INFO 8696 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/005_delete_table.yaml
+2024-09-25T00:47:46.208+06:00  INFO 8696 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/006_create_new_table_posts.yaml
+2024-09-25T00:47:46.338+06:00  INFO 8696 --- [InstagramLab] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2024-09-25T00:47:46.390+06:00  INFO 8696 --- [InstagramLab] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2024-09-25T00:47:46.392+06:00  INFO 8696 --- [InstagramLab] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2024-09-25T00:47:46.406+06:00  INFO 8696 --- [InstagramLab] [main] liquibase.util                           : UPDATE SUMMARY
+2024-09-25T00:47:46.406+06:00  INFO 8696 --- [InstagramLab] [main] liquibase.util                           : Run:                          0
+2024-09-25T00:47:46.406+06:00  INFO 8696 --- [InstagramLab] [main] liquibase.util                           : Previously run:               6
+2024-09-25T00:47:46.406+06:00  INFO 8696 --- [InstagramLab] [main] liquibase.util                           : Filtered out:                 0
+2024-09-25T00:47:46.407+06:00  INFO 8696 --- [InstagramLab] [main] liquibase.util                           : -------------------------------
+2024-09-25T00:47:46.407+06:00  INFO 8696 --- [InstagramLab] [main] liquibase.util                           : Total change sets:            6
+2024-09-25T00:47:46.408+06:00  INFO 8696 --- [InstagramLab] [main] liquibase.util                           : Update summary generated
+2024-09-25T00:47:46.436+06:00  INFO 8696 --- [InstagramLab] [main] liquibase.lockservice                    : Successfully released change log lock
+2024-09-25T00:47:46.438+06:00  INFO 8696 --- [InstagramLab] [main] liquibase.command                        : Command execution complete
+2024-09-25T00:47:46.534+06:00  INFO 8696 --- [InstagramLab] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-25T00:47:46.588+06:00  INFO 8696 --- [InstagramLab] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-09-25T00:47:46.628+06:00  INFO 8696 --- [InstagramLab] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-25T00:47:46.962+06:00  INFO 8696 --- [InstagramLab] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-25T00:47:47.968+06:00  INFO 8696 --- [InstagramLab] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-25T00:47:48.004+06:00 ERROR 8696 --- [InstagramLab] [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing column [created_date] in table [posts]
+2024-09-25T00:47:48.004+06:00  WARN 8696 --- [InstagramLab] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing column [created_date] in table [posts]
+2024-09-25T00:47:48.004+06:00  INFO 8696 --- [InstagramLab] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-25T00:47:48.012+06:00  INFO 8696 --- [InstagramLab] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-25T00:47:48.014+06:00  INFO 8696 --- [InstagramLab] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-09-25T00:47:48.026+06:00  INFO 8696 --- [InstagramLab] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-09-25T00:47:48.040+06:00 ERROR 8696 --- [InstagramLab] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing column [created_date] in table [posts]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.4.jar:3.3.4]
+	at com.example.instagramlab.InstagramlabApplication.main(InstagramlabApplication.java:10) ~[classes/:na]
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing column [created_date] in table [posts]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421) ~[spring-orm-6.1.13.jar:6.1.13]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.13.jar:6.1.13]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.1.13.jar:6.1.13]
+	... 15 common frames omitted
+Caused by: org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing column [created_date] in table [posts]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.validateTable(AbstractSchemaValidator.java:148) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.tool.schema.internal.GroupedSchemaValidatorImpl.validateTables(GroupedSchemaValidatorImpl.java:46) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.performValidation(AbstractSchemaValidator.java:98) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.doValidation(AbstractSchemaValidator.java:76) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:289) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:322) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:457) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1506) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.1.13.jar:6.1.13]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.1.13.jar:6.1.13]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.13.jar:6.1.13]
+	... 19 common frames omitted
+
+2024-09-25T00:48:45.993+06:00  INFO 14016 --- [InstagramLab] [main] c.e.i.InstagramlabApplication            : Starting InstagramlabApplication using Java 21.0.2 with PID 14016 (C:\Users\User\Desktop\instagramlab\target\classes started by User in C:\Users\User\Desktop\instagramlab)
+2024-09-25T00:48:45.996+06:00  INFO 14016 --- [InstagramLab] [main] c.e.i.InstagramlabApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-09-25T00:48:46.780+06:00  INFO 14016 --- [InstagramLab] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25T00:48:46.834+06:00  INFO 14016 --- [InstagramLab] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 2 JPA repository interfaces.
+2024-09-25T00:48:47.352+06:00  INFO 14016 --- [InstagramLab] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8089 (http)
+2024-09-25T00:48:47.365+06:00  INFO 14016 --- [InstagramLab] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-25T00:48:47.365+06:00  INFO 14016 --- [InstagramLab] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-09-25T00:48:47.425+06:00  INFO 14016 --- [InstagramLab] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-25T00:48:47.426+06:00  INFO 14016 --- [InstagramLab] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1384 ms
+2024-09-25T00:48:47.557+06:00  INFO 14016 --- [InstagramLab] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-25T00:48:47.884+06:00  INFO 14016 --- [InstagramLab] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:./db/instagram_lab user=ROOT
+2024-09-25T00:48:47.887+06:00  INFO 14016 --- [InstagramLab] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-25T00:48:47.948+06:00  INFO 14016 --- [InstagramLab] [main] liquibase.database                       : Set default schema name to PUBLIC
+2024-09-25T00:48:48.212+06:00  INFO 14016 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/001_create_table_user.yml
+2024-09-25T00:48:48.226+06:00  INFO 14016 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/002_create_table_roles.yml
+2024-09-25T00:48:48.229+06:00  INFO 14016 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/003_insert_into_roles_and_users_tables.sql
+2024-09-25T00:48:48.232+06:00  INFO 14016 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/004_create_table_posts.yaml
+2024-09-25T00:48:48.237+06:00  INFO 14016 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/005_delete_table.yaml
+2024-09-25T00:48:48.240+06:00  INFO 14016 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/006_create_new_table_posts.yaml
+2024-09-25T00:48:48.244+06:00  INFO 14016 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/007_add_column.yaml
+2024-09-25T00:48:48.365+06:00  INFO 14016 --- [InstagramLab] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2024-09-25T00:48:48.459+06:00  INFO 14016 --- [InstagramLab] [main] liquibase.lockservice                    : Successfully acquired change log lock
+2024-09-25T00:48:48.462+06:00  INFO 14016 --- [InstagramLab] [main] liquibase.command                        : Using deploymentId: 7203728462
+2024-09-25T00:48:48.463+06:00  INFO 14016 --- [InstagramLab] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2024-09-25T00:48:48.474+06:00  INFO 14016 --- [InstagramLab] [main] liquibase.ui                             : Running Changeset: db/changelog/initial/007_add_column.yaml::add-created-date-to-posts::Rukaiia
+2024-09-25T00:48:48.496+06:00  INFO 14016 --- [InstagramLab] [main] liquibase.changelog                      : Columns created_date(timestamp) added to posts
+2024-09-25T00:48:48.498+06:00  INFO 14016 --- [InstagramLab] [main] liquibase.changelog                      : ChangeSet db/changelog/initial/007_add_column.yaml::add-created-date-to-posts::Rukaiia ran successfully in 21ms
+2024-09-25T00:48:48.513+06:00  INFO 14016 --- [InstagramLab] [main] liquibase.util                           : UPDATE SUMMARY
+2024-09-25T00:48:48.513+06:00  INFO 14016 --- [InstagramLab] [main] liquibase.util                           : Run:                          1
+2024-09-25T00:48:48.513+06:00  INFO 14016 --- [InstagramLab] [main] liquibase.util                           : Previously run:               6
+2024-09-25T00:48:48.513+06:00  INFO 14016 --- [InstagramLab] [main] liquibase.util                           : Filtered out:                 0
+2024-09-25T00:48:48.513+06:00  INFO 14016 --- [InstagramLab] [main] liquibase.util                           : -------------------------------
+2024-09-25T00:48:48.514+06:00  INFO 14016 --- [InstagramLab] [main] liquibase.util                           : Total change sets:            7
+2024-09-25T00:48:48.515+06:00  INFO 14016 --- [InstagramLab] [main] liquibase.util                           : Update summary generated
+2024-09-25T00:48:48.519+06:00  INFO 14016 --- [InstagramLab] [main] liquibase.command                        : Update command completed successfully.
+2024-09-25T00:48:48.519+06:00  INFO 14016 --- [InstagramLab] [main] liquibase.ui                             : Liquibase: Update has been successful. Rows affected: 1
+2024-09-25T00:48:48.521+06:00  INFO 14016 --- [InstagramLab] [main] liquibase.lockservice                    : Successfully released change log lock
+2024-09-25T00:48:48.522+06:00  INFO 14016 --- [InstagramLab] [main] liquibase.command                        : Command execution complete
+2024-09-25T00:48:48.603+06:00  INFO 14016 --- [InstagramLab] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-25T00:48:48.667+06:00  INFO 14016 --- [InstagramLab] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-09-25T00:48:48.719+06:00  INFO 14016 --- [InstagramLab] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-25T00:48:49.070+06:00  INFO 14016 --- [InstagramLab] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-25T00:48:50.132+06:00  INFO 14016 --- [InstagramLab] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-25T00:48:50.163+06:00  INFO 14016 --- [InstagramLab] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T00:48:50.673+06:00  WARN 14016 --- [InstagramLab] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-25T00:48:50.689+06:00  WARN 14016 --- [InstagramLab] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 4b32eba7-1383-4656-b0ca-b703b3ba1d96
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-09-25T00:48:50.696+06:00  INFO 14016 --- [InstagramLab] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-09-25T00:48:51.456+06:00  INFO 14016 --- [InstagramLab] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8089 (http) with context path '/'
+2024-09-25T00:48:51.464+06:00  INFO 14016 --- [InstagramLab] [main] c.e.i.InstagramlabApplication            : Started InstagramlabApplication in 6.013 seconds (process running for 6.753)

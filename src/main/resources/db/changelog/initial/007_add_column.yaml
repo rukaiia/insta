@@ -1,0 +1,12 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-created-date-to-posts
+      author: Rukaiia
+      changes:
+        - addColumn:
+            tableName: posts
+            columns:
+              - column:
+                  name: created_date
+                  type: timestamp
+                  defaultValueComputed: CURRENT_TIMESTAMP

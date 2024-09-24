@@ -1,0 +1,39 @@
+databaseChangeLog:
+  - changeSet:
+      id: 004
+      author: Rukaiia
+      changes:
+        - createTable:
+            tableName: posts
+            columns:
+              - column:
+                  name: id
+                  type: long
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: user_id
+                  type: long
+                  constraints:
+                    nullable: falseROLES
+              - column:
+                  name: content
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: createdDate
+                  type: TIMESTAMP
+                  defaultValueComputed: CURRENT_TIMESTAMP
+                  constraints:
+                    nullable: false
+
+        - addForeignKeyConstraint:
+            baseTableName: posts
+            baseColumnNames: user_id
+            constraintName: fk_posts_user
+            referencedTableName: users
+            referencedColumnNames: id
+            onDelete: CASCADE

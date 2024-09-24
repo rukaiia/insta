@@ -1,0 +1,18 @@
+databaseChangeLog:
+  - changeSet:
+      id: 002
+      author: Rukaiia
+      changes:
+        - createTable:
+            tableName: roles
+            columns:
+              - column:
+                  name: id
+                  type: Long
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: role
+                  type: varchar(50)
