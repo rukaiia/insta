@@ -13,7 +13,7 @@
     </#if>
     <label for="content">Содержимое поста:</label><br>
     <textarea id="content" name="content" rows="4" cols="50" required></textarea><br>
-    <button type="submit">Добавить пост</button>
+    <button type="submit">Добавить пост _</button>
 </form>
 
 <#if error??>
