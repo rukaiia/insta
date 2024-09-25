@@ -1,0 +1,7 @@
+databaseChangeLog:
+  - changeSet:
+      id: delete-comment-table
+      author: Rukaiia
+      changes:
+        - dropTable:
+            tableName: comment

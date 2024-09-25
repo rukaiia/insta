@@ -30,17 +30,16 @@ public class PostService {
     private final ModelMapper modelMapper;
 
 
-public void savePost(String content) {
-    User currentUser = getCurrentUser();
-    if (currentUser != null) {
-        Post post = new Post();
-        post.setContent(content);
-        post.setUser(currentUser);
-        postRepository.save(post);
-    } else {
-        throw new IllegalArgumentException("Ошибка: текущий пользователь не найден.");
+    public void savePost(Post post) {
+        User currentUser = getCurrentUser();
+        if (currentUser != null) {
+            post.setUser(currentUser);
+            postRepository.save(post);
+        } else {
+            throw new IllegalArgumentException("Ошибка: текущий пользователь не найден.");
+        }
     }
-}
+
 
 
 
@@ -99,4 +98,7 @@ public void savePost(String content) {
     }
 
 
+    public void deletePost(Long postId) {
+        postRepository.deleteById(postId);
+    }
 }

@@ -15,6 +15,7 @@ import java.util.Date;
 @NoArgsConstructor
 public class PostDto {
         private Long id;
+    private String imagePath;
         private User user;
         private String content;
         private Date createdDate;

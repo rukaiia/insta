@@ -28,7 +28,7 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.ALWAYS))
+                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED))
                 .httpBasic(Customizer.withDefaults())
                 .formLogin(form ->
                         form.loginPage("/auth/login")
@@ -39,14 +39,15 @@ public class SecurityConfig {
                 .logout(logout -> logout
                         .logoutRequestMatcher(new AntPathRequestMatcher("/logout")).permitAll())
                 .authorizeHttpRequests(authorizeRequests -> authorizeRequests
-//                        .requestMatchers("/posts/create").permitAll()
                         .requestMatchers("/posts/mypost", "/posts").permitAll()
-                                .requestMatchers("/posts/**").permitAll()
+                        .requestMatchers("/posts/**","/auth/register").permitAll()
+                        .requestMatchers("/comments", "/comment","/posts/delete").permitAll()
                         .anyRequest().authenticated()
                 );
 
         return http.build();
     }
+
 
     @Bean
     public ModelMapper modelMapper() {

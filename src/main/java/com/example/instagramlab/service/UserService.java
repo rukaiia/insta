@@ -10,22 +10,23 @@ import com.example.instagramlab.repository.RoleRepository;
 import com.example.instagramlab.repository.UserRepository;
 import jakarta.mail.MessagingException;
 import jakarta.servlet.http.HttpServletRequest;
+import jdk.jshell.spi.ExecutionControl;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.io.UnsupportedEncodingException;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.NoSuchElementException;
-import java.util.UUID;
+import java.util.*;
 
 @Service
 @RequiredArgsConstructor
 @Slf4j
-public class UserService  {
+public class UserService {
 
     private final UserRepository userRepository;
     private final PasswordEncoder encoder;
@@ -49,6 +50,7 @@ public class UserService  {
                 .build();
         userRepository.save(user);
     }
+
     public User getUserByEmail(String email) {
         return userRepository.findByEmail(email)
                 .orElseThrow(() -> new UsernameNotFoundException("Пользователь с email " + email + " не найден"));
@@ -159,10 +161,61 @@ public class UserService  {
                 .orElseThrow(() -> new RuntimeException("такой user не найден!"));
     }
 
-    private UserDto convertoDto(User user){
+    private UserDto convertoDto(User user) {
         return UserDto.builder()
                 .id(user.getId())
                 .email(user.getEmail())
                 .build();
     }
+    public User getCurrentUser() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        if (authentication != null && authentication.getPrincipal() instanceof UserDetails) {
+            UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+            String username = userDetails.getUsername();
+
+            Optional<User> optionalUser = userRepository.findByEmail(username);
+
+            return optionalUser.orElse(null);
+        }
+        return null;
+    }
+
+//    public String followUser(long reqUserId, long followUserId) throws ExecutionControl.UserException {
+//        // Find the users by their IDs
+//        UserDto reqUser = findUserById(reqUserId);
+//        UserDto followUser = findUserById(followUserId);
+//
+//        // Check if users exist
+//        if (reqUser == null || followUser == null) {
+//            throw new ExecutionControl.UserException("User not found.");
+//        }
+//
+//        // Create the User objects to represent the follower and the followed user
+//        User follower = new User();
+//        follower.setId(reqUser.getId());
+//        follower.setEmail(reqUser.getEmail());
+//        // follower.setUserImage(reqUser.getImage()); // Uncomment if needed
+//
+//        User following = new User();
+//        following.setId(followUser.getId());
+//        following.setEmail(followUser.getEmail());
+//        // following.setUserImage(followUser.getImage()); // Uncomment if needed
+//
+//        // Add the following relationship
+//        if (!reqUser.getFollowing().contains(following)) {
+//            reqUser.getFollowing().add(following);
+//        }
+//
+//        // Add the follower relationship
+//        if (!followUser.getFollower().contains(follower)) {
+//            followUser.getFollower().add(follower);
+//        }
+//
+//        // Save the updated users to the repository
+//        userRepository.save(reqUser);  // Save the requesting user
+//        userRepository.save(followUser); // Save the followed user
+//
+//        return "You are now following " + followUser.getEmail();
+//    }
+
 }

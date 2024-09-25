@@ -1,30 +1,61 @@
-<#-- myposts.ftlh -->
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>Мои Посты</title>
+<#-- posts.ftlh -->
+<#import '../layout.ftlh' as layout>
+<@layout.layout ; spring>
+    <!DOCTYPE html>
+    <html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Мои Посты</title>
+    </head>
+    <body>
+    <h1>Мои Посты</h1>
 
-</head>
-<body>
-<h1>Мои Посты</h1>
+    <#if posts?has_content>
+        <ul>
+            <#list posts as post>
+                <li>
+                    <h2>${post.content}</h2>
 
-<#if posts?has_content>
-    <ul>
-        <#list posts as post>
-            <li>
-                <h2>${post.content}</h2>
-<#--                <p>Создано: ${post.createdDate?string("dd-MM-yyyy HH:mm")}</p>-->
-            </li>
-        </#list>
-    </ul>
-<#else>
-    <p>У вас пока нет постов.</p>
-</#if>
-<form action="/posts/create" method="get">
-    <button type="submit">Добавить пост</button>
-</form>
+                    <form action="/posts/delete" method="post">
+                        <#if _csrf??>
+                            <input type="hidden" name="${(_csrf.parameterName)!'csrf-param-name'}"
+                                   value="${(_csrf.token)!'csrf-token'}"/>
+                        </#if>
+                        <#if post.imagePath?has_content>
+                            <img src="/uploads/${post.imagePath}" alt="Post Image">
+                        <#else>
+                            <p>Изображение не загружено.</p>
+                        </#if>
 
-<a href="/posts">Назад к всем постам</a>
-</body>
-</html>
+
+                        <input type="hidden" name="id" value="${post.id}" />
+                        <button type="submit">Удалить пост</button>
+                    </form>
+                    <p>Создано: ${post.createdDate?string("dd-MM-yyyy HH:mm")}</p>
+                </li>
+            </#list>
+        </ul>
+    <#else>
+        <p>У вас пока нет постов.</p>
+    </#if>
+
+    <form action="/posts/create" method="post" enctype="multipart/form-data">
+        <#if _csrf??>
+            <input type="hidden" name="${(_csrf.parameterName)!'csrf-param-name'}"
+                   value="${(_csrf.token)!'csrf-token'}"/>
+        </#if>
+        <label for="content">Контент:</label>
+        <textarea name="content" required></textarea>
+
+        <label for="image">Выберите изображение:</label>
+        <input type="file" name="image" accept="image/*">
+
+        <button type="submit">Добавить пост</button>
+    </form>
+
+    <a href="/posts">Назад к всем постам</a>
+    </body>
+    </html>
+</@layout.layout>
+

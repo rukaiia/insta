@@ -1,4 +1,6 @@
 <#-- posts.ftlh -->
+<#import '../layout.ftlh' as layout>
+<@layout.layout ; spring>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -28,3 +30,4 @@
 </body>
 </html>
 
+</@layout.layout>

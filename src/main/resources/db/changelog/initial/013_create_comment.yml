@@ -1,0 +1,47 @@
+databaseChangeLog:
+  - changeSet:
+      id: 013
+      author: Rukaiia
+      changes:
+        - createTable:
+            tableName: comment
+            columns:
+              - column:
+                  name: id
+                  type: long
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: created
+                  type: TIMESTAMP
+                  constraints:
+                    nullable: false
+              - column:
+                  name: text
+                  type: VARCHAR(60)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: user_id
+                  type: long
+                  constraints:
+                    nullable: false
+              - column:
+                  name: post_id
+                  type: long
+                  constraints:
+                    nullable: false
+        - addForeignKeyConstraint:
+            baseTableName: comment
+            baseColumnNames: user_id
+            constraintName: fk_comment_user
+            referencedTableName: users
+            referencedColumnNames: id
+        - addForeignKeyConstraint:
+            baseTableName: comment
+            baseColumnNames: post_id
+            constraintName: fk_comment_post
+            referencedTableName: posts
+            referencedColumnNames: id

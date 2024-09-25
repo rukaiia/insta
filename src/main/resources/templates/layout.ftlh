@@ -20,7 +20,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top mb-2">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/auth/eduFood">EduFood</a>
+            <a class="navbar-brand" href="/posts">Instagram</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,48 +29,17 @@
             <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/">Рестораны</a>
+                        <a class="nav-link active" aria-current="page" href="/posts/mypost">My Profile</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/profile">Профиль</a>
-                    </li>
+
                 </ul>
             </div>
 
             <div class="collapse navbar-collapse justify-content-end">
                 <#assign known = SPRING_SECURITY_CONTEXT?? >
-                <#if known>
-                    <#assign
-                    user = SPRING_SECURITY_CONTEXT.authentication.principal
-                    name = user.getUsername()
-                    >
 
-                    <#if mealsCount?? && mealsCount gt 0>
-                        <a href="/cart/view" class="btn btn-outline-info position-relative ms-2 me-2">
-                            <i class="bi bi-cart3"></i>
-                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                                ${mealsCount}
-                            </span>
-                        </a>
-                    <#else>
-                        <a href="/cart/view" class="btn btn-outline-info position-relative ms-2 me-2">
-                            <i class="bi bi-cart3"></i>
-                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                                0
-                            </span>
-                        </a>
-                    </#if>
 
-                    <div class="btn-group m-2">
-                        <#list user.authorities as auth>
-                            <a class="btn-outline-info" href="/profile">
-                                ${name}
-                            </a>
-                            <#if auth?has_next>
-                                /
-                            </#if>
-                        </#list>
-                    </div>
+
                     <#if _csrf??>
                         <form action="/logout" method="post">
                             <input type="hidden" name="${(_csrf.parameterName)!'csrf'}"
@@ -80,26 +49,18 @@
                     <#else>
                         <a href="/logout" class="btn btn-outline-info m-2" id="logout">Logout</a>
                     </#if>
-                <#else>
-                    <#if mealsCount?? && mealsCount gt 0>
-                        <a href="/cart/view" class="btn btn-outline-info position-relative ms-2 me-2">
-                            <i class="bi bi-cart3"></i>
-                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                                ${mealsCount}
-                            </span>
-                        </a>
-                    <#else>
+
                         <a href="/cart/view" class="btn btn-outline-info position-relative ms-2 me-2">
                             <i class="bi bi-cart3"></i>
                             <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                                 0
                             </span>
                         </a>
-                    </#if>
+
 
                     <a href="/auth/login" class="btn btn-outline-info m-2">Login</a>
                     <a href="/auth/register" class="btn btn-outline-info m-2">Register</a>
-                </#if>
+
             </div>
         </div>
     </nav>

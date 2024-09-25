@@ -1,23 +1,33 @@
 server:
   port: 8089
+
 spring:
   application:
     name: InstagramLab
 
+  web:
+    resources:
+      static-locations: classpath:/static/, file:./uploads/
+
   mvc:
     static-path-pattern: /static/**
+
   freemarker:
     expose-session-attributes: true
+
   datasource:
     url: jdbc:h2:./db/instagram_lab;AUTO_SERVER=TRUE
     username: root
     password: qwerty
     driver-class-name: org.h2.Driver
+
   jpa:
     hibernate:
       ddl-auto: validate
+
   liquibase:
     change-log: classpath:/db/changelog/master.yml
+
   mail:
     host: smtp.gmail.com
     username: res.pswd.attractor@gmail.com
