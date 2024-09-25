@@ -5,12 +5,8 @@ spring:
   application:
     name: InstagramLab
 
-  web:
-    resources:
-      static-locations: classpath:/static/, file:./uploads/
-
   mvc:
-    static-path-pattern: /static/**
+    static-path-pattern: /uploads/**
 
   freemarker:
     expose-session-attributes: true
@@ -38,6 +34,9 @@ spring:
         smtp:
           auth: true
           starttls.enable: true
+  web:
+    resources:
+      static-locations: file:./uploads/
 
 logging:
   level:

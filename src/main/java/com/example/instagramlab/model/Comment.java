@@ -10,6 +10,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -39,4 +40,7 @@ public class Comment {
     @ManyToOne
     @JoinColumn(name = "post_id", nullable = false)
     private Post post;
+
+
+
 }

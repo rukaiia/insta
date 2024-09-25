@@ -3,8 +3,11 @@ package com.example.instagramlab.controller;
 import com.example.instagramlab.common.DateUtils;
 import com.example.instagramlab.dto.PostDto;
 import com.example.instagramlab.dto.UserDto;
+import com.example.instagramlab.model.Comment;
 import com.example.instagramlab.model.Post;
 import com.example.instagramlab.model.User;
+import com.example.instagramlab.repository.CommentRepository;
+import com.example.instagramlab.repository.PostRepository;
 import com.example.instagramlab.service.AuthUserDetailsService;
 import com.example.instagramlab.service.PostService;
 import com.example.instagramlab.service.UserService;
@@ -13,6 +16,7 @@ import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
@@ -25,6 +29,7 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.time.LocalDateTime;
@@ -38,6 +43,8 @@ public class PostController {
     private final PostService postService;
     private final UserService userService;
     private final AuthUserDetailsService authUserDetailsService;
+    private final PostRepository postRepository;
+    private final CommentRepository commentRepository;
 
     @GetMapping("/{postId}")
     public String getPostById(@PathVariable Long postId, Model model) {
@@ -69,14 +76,14 @@ public class PostController {
 
         if (!image.isEmpty()) {
             try {
-
-                File uploadsDir = new File("/uploads/");
+                String uploadDir = System.getProperty("user.dir") + "/uploads/";
+                File uploadsDir = new File(uploadDir);
                 if (!uploadsDir.exists()) {
                     uploadsDir.mkdir();
                 }
 
-                String imagePath = image.getOriginalFilename();
-                String fullPath = uploadsDir.getAbsolutePath() + "/" + imagePath;
+                String imagePath = System.currentTimeMillis() + "_" + image.getOriginalFilename();
+                String fullPath = uploadDir + imagePath;
                 File file = new File(fullPath);
                 image.transferTo(file);
                 post.setImagePath(imagePath);
@@ -94,6 +101,7 @@ public class PostController {
 
 
 
+
     @PostMapping("/delete")
     public String deletePost(@RequestParam Long id) {
         postService.deletePost(id);
@@ -103,7 +111,7 @@ public class PostController {
     @ResponseBody
     public ResponseEntity<Resource> getImage(@PathVariable String filename) {
         try {
-            Path file = Paths.get("/uploads/").resolve(filename);
+            Path file = Paths.get(System.getProperty("user.dir") + "/uploads/").resolve(filename);
             Resource resource = new UrlResource(file.toUri());
 
             if (resource.exists() || resource.isReadable()) {
@@ -117,6 +125,7 @@ public class PostController {
             return ResponseEntity.badRequest().build();
         }
     }
+
 
 
 
@@ -167,5 +176,38 @@ public class PostController {
     }
 
 
+    @PostMapping("/{postId}/comments")
+    public String addComment(@PathVariable Long postId, @RequestParam String content, @RequestParam String email) {
+        System.out.println("Adding comment to post with ID: " + postId); // Лог для проверки вызова метода
+        Post post = postRepository.findById(postId)
+                .orElseThrow(() -> new IllegalArgumentException("Invalid post Id: " + postId));
 
+        Comment comment = new Comment();
+        comment.setText(content);
+        comment.setCreated(Timestamp.valueOf(LocalDateTime.now()));
+
+        // Получаем пользователя по email
+        User user = userService.getUserByEmail(email);
+        if (user == null) {
+            System.out.println("User not found for email: " + email); // Лог для проверки пользователя
+            return "redirect:/posts/" + postId; // Перенаправляем на страницу поста
+        }
+        comment.setUser(user); // Устанавливаем пользователя в комментарий
+
+        post.addComment(comment);
+        postRepository.save(post); // Сохранение поста с добавленным комментарием
+        System.out.println("Comment added successfully."); // Лог успешного добавления
+
+        return "redirect:/posts/" + postId; // Перенаправляем на страницу поста
+    }
+
+
+    @PostMapping("/comments/delete")
+    public String deleteComment(@RequestParam Long commentId, @RequestParam Long postId) {
+        Comment comment = commentRepository.findById(commentId).orElseThrow(() -> new IllegalArgumentException("Invalid comment Id:" + commentId));
+        Post post = postRepository.findById(postId).orElseThrow(() -> new IllegalArgumentException("Invalid post Id:" + postId));
+        post.removeComment(comment);
+        postRepository.save(post);
+        return "redirect:/posts/" + postId; // Перенаправляем на страницу поста
+    }
 }

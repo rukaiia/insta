@@ -12,7 +12,6 @@
 <p>${post.content}</p>
 
 <h3>Создано:</h3>
-<#--<p>${post.createdDate?string("dd-MM-yyyy HH:mm")}</p>-->
 
 <h3>Автор поста:</h3>
 <p>${post.user.email}</p>

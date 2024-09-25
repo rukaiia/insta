@@ -180,42 +180,7 @@ public class UserService {
         return null;
     }
 
-//    public String followUser(long reqUserId, long followUserId) throws ExecutionControl.UserException {
-//        // Find the users by their IDs
-//        UserDto reqUser = findUserById(reqUserId);
-//        UserDto followUser = findUserById(followUserId);
-//
-//        // Check if users exist
-//        if (reqUser == null || followUser == null) {
-//            throw new ExecutionControl.UserException("User not found.");
-//        }
-//
-//        // Create the User objects to represent the follower and the followed user
-//        User follower = new User();
-//        follower.setId(reqUser.getId());
-//        follower.setEmail(reqUser.getEmail());
-//        // follower.setUserImage(reqUser.getImage()); // Uncomment if needed
-//
-//        User following = new User();
-//        following.setId(followUser.getId());
-//        following.setEmail(followUser.getEmail());
-//        // following.setUserImage(followUser.getImage()); // Uncomment if needed
-//
-//        // Add the following relationship
-//        if (!reqUser.getFollowing().contains(following)) {
-//            reqUser.getFollowing().add(following);
-//        }
-//
-//        // Add the follower relationship
-//        if (!followUser.getFollower().contains(follower)) {
-//            followUser.getFollower().add(follower);
-//        }
-//
-//        // Save the updated users to the repository
-//        userRepository.save(reqUser);  // Save the requesting user
-//        userRepository.save(followUser); // Save the followed user
-//
-//        return "You are now following " + followUser.getEmail();
-//    }
+
+
 
 }

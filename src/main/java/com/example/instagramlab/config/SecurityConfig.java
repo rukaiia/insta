@@ -42,7 +42,7 @@ public class SecurityConfig {
                         .requestMatchers("/posts/mypost", "/posts").permitAll()
                         .requestMatchers("/posts/**","/auth/register").permitAll()
                         .requestMatchers("/comments", "/comment","/posts/delete").permitAll()
-                        .anyRequest().authenticated()
+                        .anyRequest().permitAll()
                 );
 
         return http.build();
