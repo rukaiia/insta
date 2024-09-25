@@ -1,7 +1,9 @@
 package com.example.instagramlab.service;
 
 import com.example.instagramlab.common.Utilities;
+import com.example.instagramlab.dto.PostDto;
 import com.example.instagramlab.dto.UserDto;
+import com.example.instagramlab.model.Post;
 import com.example.instagramlab.model.Role;
 import com.example.instagramlab.model.User;
 import com.example.instagramlab.repository.RoleRepository;
@@ -46,6 +48,10 @@ public class UserService  {
                 .enabled(true)
                 .build();
         userRepository.save(user);
+    }
+    public User getUserByEmail(String email) {
+        return userRepository.findByEmail(email)
+                .orElseThrow(() -> new UsernameNotFoundException("Пользователь с email " + email + " не найден"));
     }
 
     private User getUserByToken(String token) {
@@ -147,4 +153,16 @@ public class UserService  {
         return model;
     }
 
+    public UserDto findUserById(Long userId) {
+        return userRepository.findById(userId)
+                .map(this::convertoDto)
+                .orElseThrow(() -> new RuntimeException("такой user не найден!"));
+    }
+
+    private UserDto convertoDto(User user){
+        return UserDto.builder()
+                .id(user.getId())
+                .email(user.getEmail())
+                .build();
+    }
 }

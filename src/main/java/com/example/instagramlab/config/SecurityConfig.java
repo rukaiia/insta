@@ -1,6 +1,7 @@
 package com.example.instagramlab.config;
 
 import lombok.RequiredArgsConstructor;
+import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.Customizer;
@@ -32,17 +33,25 @@ public class SecurityConfig {
                 .formLogin(form ->
                         form.loginPage("/auth/login")
                                 .loginProcessingUrl("/auth/login")
-                                .defaultSuccessUrl("/")
+                                .defaultSuccessUrl("/posts")
                                 .failureUrl("/auth/login?error=true")
                                 .permitAll())
                 .logout(logout -> logout
                         .logoutRequestMatcher(new AntPathRequestMatcher("/logout")).permitAll())
                 .authorizeHttpRequests(authorizeRequests -> authorizeRequests
-//                        .requestMatchers( "/","/auth/register").permitAll()
-//                        .requestMatchers("/cart/confirm", "/profile", "/profile/order/").authenticated()
-                        .anyRequest().permitAll()
+//                        .requestMatchers("/posts/create").permitAll()
+                        .requestMatchers("/posts/mypost", "/posts").permitAll()
+                                .requestMatchers("/posts/**").permitAll()
+                        .anyRequest().authenticated()
                 );
+
         return http.build();
     }
+
+    @Bean
+    public ModelMapper modelMapper() {
+        return new ModelMapper();
+    }
+
 
 }
