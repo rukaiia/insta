@@ -15,8 +15,7 @@
 
 <h3>Автор поста:</h3>
 <p>${post.user.email}</p>
-<a href="/comments/${post.id}">Посмотреть комментарии</a>
-
+<a href="/posts/${post.id}/comments">Посмотреть комментарии</a>
 
 <a href="/posts">Вернуться к списку постов</a>
 </body>

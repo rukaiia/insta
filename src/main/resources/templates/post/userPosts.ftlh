@@ -15,6 +15,11 @@
                 <h2>${post.content}</h2>
 
                 <a href="/posts/${post.id}">Посмотреть пост</a>
+                <#if post.imagePath?has_content>
+                    <img src="/uploads/${post.imagePath}" alt="Post Image" style="max-width: 100%; height: auto;">
+                <#else>
+                    <p>Изображение недоступно</p>
+                </#if>
             </li>
         </#list>
     </ul>

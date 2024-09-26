@@ -6,7 +6,6 @@
     <title>Комментарии к посту</title>
 </head>
 <body>
-<#-- post.ftlh -->
 <h2>${post.content}</h2>
 <#if post.imagePath?has_content>
     <img src="/uploads/${post.imagePath}" alt="Post Image" style="max-width: 100%; height: auto;">
@@ -30,7 +29,6 @@
 </#if>
 
 <h3>Добавить комментарий</h3>
-
 <form action="/posts/${post.id}/comments" method="post">
     <#if _csrf??>
         <input type="hidden" name="${(_csrf.parameterName)!'csrf-param-name'}"
@@ -43,7 +41,7 @@
     <button type="submit">Добавить комментарий</button>
 </form>
 
-
 <a href="/posts/${post.id}">Назад</a>
 </body>
 </html>
+

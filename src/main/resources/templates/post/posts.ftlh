@@ -18,6 +18,11 @@
                 <h2>${post.content}</h2>
 <#--                <!-- <p>Создано: ${post.createdDate?string("dd-MM-yyyy HH:mm")}</p> &ndash;&gt;-->
                 <a href="/posts/${post.user.id}/posts">Посты пользователя</a>
+                <#if post.imagePath?has_content>
+                    <img src="/uploads/${post.imagePath}" alt="Post Image" style="max-width: 100%; height: auto;">
+                <#else>
+                    <p>Изображение недоступно</p>
+                </#if>
             </li>
         </#list>
 

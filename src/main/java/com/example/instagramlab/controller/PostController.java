@@ -42,7 +42,6 @@ public class PostController {
 
     private final PostService postService;
     private final UserService userService;
-    private final AuthUserDetailsService authUserDetailsService;
     private final PostRepository postRepository;
     private final CommentRepository commentRepository;
 
@@ -128,16 +127,6 @@ public class PostController {
 
 
 
-
-
-
-
-
-
-
-
-
-
     @GetMapping("/mypost")
     public String myPosts(Model model) {
         try {
@@ -177,8 +166,9 @@ public class PostController {
 
 
     @PostMapping("/{postId}/comments")
-    public String addComment(@PathVariable Long postId, @RequestParam String content, @RequestParam String email) {
-        System.out.println("Adding comment to post with ID: " + postId); // Лог для проверки вызова метода
+    public String addComment(@PathVariable Long postId, @RequestParam String content, @RequestParam String email, Model model) {
+        System.out.println("Adding comment to post with ID: " + postId);
+
         Post post = postRepository.findById(postId)
                 .orElseThrow(() -> new IllegalArgumentException("Invalid post Id: " + postId));
 
@@ -186,21 +176,28 @@ public class PostController {
         comment.setText(content);
         comment.setCreated(Timestamp.valueOf(LocalDateTime.now()));
 
-        // Получаем пользователя по email
         User user = userService.getUserByEmail(email);
         if (user == null) {
-            System.out.println("User not found for email: " + email); // Лог для проверки пользователя
-            return "redirect:/posts/" + postId; // Перенаправляем на страницу поста
+            System.out.println("User not found for email: " + email);
+            return "redirect:/posts/" + postId;
         }
-        comment.setUser(user); // Устанавливаем пользователя в комментарий
 
+        comment.setUser(user);
         post.addComment(comment);
-        postRepository.save(post); // Сохранение поста с добавленным комментарием
-        System.out.println("Comment added successfully."); // Лог успешного добавления
+        postRepository.save(post);
+        System.out.println("Comment added successfully.");
 
-        return "redirect:/posts/" + postId; // Перенаправляем на страницу поста
+        model.addAttribute("post", post);
+
+        return "redirect:/posts/" + postId + "post/comments";
     }
-
+    @GetMapping("/{postId}/comments")
+    public String getComments(@PathVariable Long postId, Model model) {
+        Post post = postRepository.findById(postId)
+                .orElseThrow(() -> new IllegalArgumentException("Invalid post Id: " + postId));
+        model.addAttribute("post", post);
+        return "post/comments";
+    }
 
     @PostMapping("/comments/delete")
     public String deleteComment(@RequestParam Long commentId, @RequestParam Long postId) {
@@ -208,6 +205,6 @@ public class PostController {
         Post post = postRepository.findById(postId).orElseThrow(() -> new IllegalArgumentException("Invalid post Id:" + postId));
         post.removeComment(comment);
         postRepository.save(post);
-        return "redirect:/posts/" + postId; // Перенаправляем на страницу поста
+        return "redirect:/posts/" + postId;
     }
 }
