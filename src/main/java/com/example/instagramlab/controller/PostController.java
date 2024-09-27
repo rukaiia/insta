@@ -8,7 +8,6 @@ import com.example.instagramlab.model.Post;
 import com.example.instagramlab.model.User;
 import com.example.instagramlab.repository.CommentRepository;
 import com.example.instagramlab.repository.PostRepository;
-import com.example.instagramlab.service.AuthUserDetailsService;
 import com.example.instagramlab.service.PostService;
 import com.example.instagramlab.service.UserService;
 import lombok.RequiredArgsConstructor;
@@ -16,7 +15,6 @@ import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
@@ -32,8 +30,6 @@ import java.nio.file.Paths;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.List;
-import java.time.LocalDateTime;
-import java.util.Date;
 
 @Controller
 @RequiredArgsConstructor
@@ -189,7 +185,7 @@ public class PostController {
 
         model.addAttribute("post", post);
 
-        return "redirect:/posts/" + postId + "post/comments";
+        return "redirect:/posts" + postId + "post/comments";
     }
     @GetMapping("/{postId}/comments")
     public String getComments(@PathVariable Long postId, Model model) {
@@ -201,10 +197,30 @@ public class PostController {
 
     @PostMapping("/comments/delete")
     public String deleteComment(@RequestParam Long commentId, @RequestParam Long postId) {
-        Comment comment = commentRepository.findById(commentId).orElseThrow(() -> new IllegalArgumentException("Invalid comment Id:" + commentId));
-        Post post = postRepository.findById(postId).orElseThrow(() -> new IllegalArgumentException("Invalid post Id:" + postId));
+        Comment comment = commentRepository.findById(commentId)
+                .orElseThrow(() -> new IllegalArgumentException("Invalid comment Id: " + commentId));
+
+        Post post = postRepository.findById(postId)
+                .orElseThrow(() -> new IllegalArgumentException("Invalid post Id: " + postId));
+
         post.removeComment(comment);
         postRepository.save(post);
-        return "redirect:/posts/" + postId;
+        commentRepository.delete(comment);
+
+        return "redirect:/posts";
     }
+    @PostMapping("/{postId}/like")
+    public String likePost(@PathVariable Long postId){
+        postService.likePost(postId);
+        return "redirect:/posts";
+
+    }
+    @PostMapping("/{postId}/dislike")
+    public String dislikePost(@PathVariable Long postId){
+        postService.dislikePost(postId);
+        return "redirect:/posts";
+
+    }
+
+
 }

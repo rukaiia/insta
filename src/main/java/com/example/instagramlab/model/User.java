@@ -28,13 +28,7 @@ public class User {
     @ManyToOne
     @PrimaryKeyJoinColumn(name = "role_id")
     private Role role;
-//    @Embedded
-//    @ElementCollection
-//    private Set<UserDetails> following = new HashSet<>();
-//
-//    @Embedded
-//    @ElementCollection
-//    private Set<UserDetails> follower= new HashSet<>();
+
 
 
 }

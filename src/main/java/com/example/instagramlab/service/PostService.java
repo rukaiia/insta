@@ -11,6 +11,7 @@ import org.modelmapper.ModelMapper;
 import org.springdoc.core.service.SecurityService;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.parameters.P;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
@@ -100,5 +101,21 @@ public class PostService {
 
     public void deletePost(Long postId) {
         postRepository.deleteById(postId);
+    }
+
+
+    public Post likePost(Long postId){
+        Post post = postRepository.findById(postId)
+                .orElseThrow(() -> new RuntimeException("post not found"));
+        post.setLikeCounts(post.getLikeCounts() + 1);
+        return postRepository.save(post);
+
+    }
+    public Post dislikePost(Long postID){
+        Post post =
+        postRepository.findById(postID)
+                .orElseThrow(() -> new RuntimeException("post not find "));
+        post.setDislikeCounts(post.getDislikeCounts()  + 1);
+        return postRepository.save(post);
     }
 }

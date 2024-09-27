@@ -39,9 +39,10 @@ public class SecurityConfig {
                 .logout(logout -> logout
                         .logoutRequestMatcher(new AntPathRequestMatcher("/logout")).permitAll())
                 .authorizeHttpRequests(authorizeRequests -> authorizeRequests
-                        .requestMatchers("/posts/mypost", "/posts").permitAll()
-                        .requestMatchers("/posts/**","/auth/register").permitAll()
-                        .requestMatchers("/comments", "/comment","/posts/delete").permitAll()
+                        .requestMatchers("/posts/mypost").permitAll()
+                        .requestMatchers("/auth/register").permitAll()
+                        .requestMatchers("/comment","/posts/delete").permitAll()
+                        .requestMatchers("/posts/delete", "/profile","/posts/delete","/posts/create", "/comment", "/posts/like").authenticated()
                         .anyRequest().permitAll()
                 );
 

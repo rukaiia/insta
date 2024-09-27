@@ -26,7 +26,10 @@ public class Post {
 
     @Column(name = "created_date", columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     private Date createdDate;
-
+    @Column(name = "like_counts", columnDefinition = "int default 0")
+private int likeCounts;
+    @Column(name = "dislike_counts", columnDefinition = "int default 0")
+    private int dislikeCounts;
     @OneToMany(mappedBy = "post", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Comment> comments = new ArrayList<>();
 

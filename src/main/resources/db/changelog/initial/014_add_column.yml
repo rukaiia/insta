@@ -1,0 +1,12 @@
+databaseChangeLog:
+  - changeSet:
+      id: 012
+      author: Rukaiia
+      changes:
+        - addColumn:
+            tableName: posts
+            columns:
+              - column:
+                  name: like_counts
+                  type: int
+                  defaultValue: 0

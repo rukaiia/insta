@@ -1,0 +1,12 @@
+databaseChangeLog:
+  - changeSet:
+      id: 015
+      author: Rukaiia
+      changes:
+        - addColumn:
+            tableName: posts
+            columns:
+              - column:
+                  name: dislike_counts
+                  type: int
+                  defaultValue: 0

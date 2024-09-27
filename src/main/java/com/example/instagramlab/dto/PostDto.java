@@ -23,6 +23,8 @@ public class PostDto {
         private User user;
         private String content;
         private Date createdDate;
+    private int dislikeCounts;
+    private int likeCounts;
     private List<Comment> comments = new ArrayList<>();
     }
 

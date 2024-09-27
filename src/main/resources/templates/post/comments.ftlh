@@ -17,16 +17,29 @@
 <h3>Комментарии</h3>
 <#if post.comments?has_content>
     <ul>
-        <#list post.comments as comment>
-            <li>
-                <p>${comment.text}</p>
-                <p>Создано: ${comment.created?string("dd-MM-yyyy HH:mm")}</p>
-            </li>
-        </#list>
-    </ul>
-<#else>
-    <p>Комментариев пока нет.</p>
-</#if>
+
+                        <#list post.comments as comment>
+                            <li>
+                                <p>${comment.text}</p>
+                                <p>Создано: ${comment.created?string("dd-MM-yyyy HH:mm")}</p>
+                                <form action="/posts/comments/delete" method="post">
+                                    <#if _csrf??>
+                                        <input type="hidden" name="${(_csrf.parameterName)!'csrf-param-name'}"
+                                               value="${(_csrf.token)!'csrf-token'}"/>
+                                    </#if>
+                                    <input type="hidden" name="commentId" value="${comment.id}" />
+                                    <input type="hidden" name="postId" value="${post.id}" />
+                                    <button type="submit">Удалить комментарий</button>
+                                </form>
+
+                            </li>
+                        </#list>
+                    </ul>
+                <#else>
+                    <p>Комментариев пока нет.</p>
+                </#if>
+
+
 
 <h3>Добавить комментарий</h3>
 <form action="/posts/${post.id}/comments" method="post">
@@ -40,6 +53,7 @@
     <input type="email" name="email" required>
     <button type="submit">Добавить комментарий</button>
 </form>
+
 
 <a href="/posts/${post.id}">Назад</a>
 </body>

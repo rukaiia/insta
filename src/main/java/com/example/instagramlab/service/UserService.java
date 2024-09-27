@@ -167,18 +167,7 @@ public class UserService {
                 .email(user.getEmail())
                 .build();
     }
-    public User getCurrentUser() {
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        if (authentication != null && authentication.getPrincipal() instanceof UserDetails) {
-            UserDetails userDetails = (UserDetails) authentication.getPrincipal();
-            String username = userDetails.getUsername();
 
-            Optional<User> optionalUser = userRepository.findByEmail(username);
-
-            return optionalUser.orElse(null);
-        }
-        return null;
-    }
 
 
 

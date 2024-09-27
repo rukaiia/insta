@@ -1,3 +1,4 @@
+
 <#import "spring.ftl" as spring>
 <#macro layout>
     <!doctype html>
@@ -50,12 +51,7 @@
                         <a href="/logout" class="btn btn-outline-info m-2" id="logout">Logout</a>
                     </#if>
 
-                        <a href="/cart/view" class="btn btn-outline-info position-relative ms-2 me-2">
-                            <i class="bi bi-cart3"></i>
-                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                                0
-                            </span>
-                        </a>
+
 
 
                     <a href="/auth/login" class="btn btn-outline-info m-2">Login</a>
@@ -68,23 +64,7 @@
     <div class="container" style="margin-top: 70px;">
         <#nested spring>
     </div>
-    <div class="modal fade" id="addToCartModal" tabindex="-1" aria-labelledby="addToCartModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="addToCartModalLabel">Спасибо</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    Товар успешно добавлен в корзину!
-                </div>
-                <div class="modal-footer">
-                    <a href="/cart/view" class="btn btn-primary">Перейти в корзину</a>
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Продолжить покупки</button>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
     </body>
     </html>

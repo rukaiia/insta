@@ -1,4 +1,3 @@
-<#-- posts.ftlh -->
 <#import '../layout.ftlh' as layout>
 
 <@layout.layout ; spring>
@@ -26,8 +25,11 @@
 
                         <#if post.imagePath?has_content>
                             <img src="/uploads/${post.imagePath}" alt="Post Image" style="max-width: 100%; height: auto;">
+                            <p id="like-count">${post.likeCounts} лайков</p>
+
                         <#else>
                             <p>Изображение недоступно</p>
+
                         </#if>
                         <input type="hidden" name="id" value="${post.id}" />
                         <button type="submit">Удалить пост</button>
