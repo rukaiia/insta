@@ -79,9 +79,7 @@ public class PostService {
         return postRepository.findAllByOrderByIdDesc();
     }
 
-    public Post save(Post post) {
-        return postRepository.save(post);
-    }
+
 
     public PostDto getPostById(Long postId) {
         log.info("post with id: {} found", postId);
