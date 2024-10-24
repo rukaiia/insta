@@ -39,6 +39,8 @@ public class SecurityConfig {
                 .logout(logout -> logout
                         .logoutRequestMatcher(new AntPathRequestMatcher("/logout")).permitAll())
                 .authorizeHttpRequests(authorizeRequests -> authorizeRequests
+                        .requestMatchers("/admin/register").permitAll()
+                        .requestMatchers("/admin").hasAuthority("ROLE_ADMIN")
                         .requestMatchers("/posts/mypost").permitAll()
                         .requestMatchers("/auth/register").permitAll()
                         .requestMatchers("/comment","/posts/delete").permitAll()

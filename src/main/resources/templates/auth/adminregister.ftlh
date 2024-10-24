@@ -5,7 +5,7 @@
     <div class="container h-100 m-3">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-xl-9">
-                <h1 class="text-white mb-4 text-center">Регистрация</h1>
+                <h1 class="text-white mb-4 text-center">Регистрация Admina</h1>
                 <div class="card" style="border-radius: 15px;">
                     <div class="card-body">
                         <form action="/auth/register" method="post">
@@ -39,15 +39,8 @@
                                     <@spring.showErrors "<br>" "error text-danger" />
                                 </div>
                             </div>
-                            <div class="row align-items-center py-3">
-                                <div class="col-md-3 ps-5">
-                                    <h6 class="mb-0">Район</h6>
-                                </div>
-                                <div class="col-md-9 pe-5">
-                                    <label for="district"> District</label>
-                                    <@spring.formInput "userDto.district" 'id="form3Example4cg" class="form-control form-control-lg"' />
-                                    <@spring.showErrors "<br>" "error text-danger" />
-                                </div>
+
+                            </div>
                             <div class="row align-items-center py-3">
                                 <div class="col-md-3 ps-5">
                                     <h6 class="mb-0">PhoneNumber</h6>

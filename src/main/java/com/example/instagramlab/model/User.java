@@ -24,6 +24,8 @@ public class User {
     private String password;
     private boolean enabled;
     private String resetPasswordToken;
+    private String phoneNumber;
+    private String district;
 
     @ManyToOne
     @PrimaryKeyJoinColumn(name = "role_id")

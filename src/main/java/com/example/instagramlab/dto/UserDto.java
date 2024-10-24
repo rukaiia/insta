@@ -17,6 +17,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class UserDto {
     private Long id;
+    private String phoneNumber;
+    private String district;
     @Email
     @NotBlank(message = "Адрес эл.почты обязательное поле для заполнения!")
     @UniqueEmail(message = "Пользователь с такой эл.почтой уже существует!")

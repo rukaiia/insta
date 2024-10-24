@@ -47,6 +47,8 @@ public class UserService {
                 .password(encoder.encode(userDto.getPassword()))
                 .role(role)
                 .enabled(true)
+                .phoneNumber(userDto.getPhoneNumber())
+                .district(userDto.getDistrict())
                 .build();
         userRepository.save(user);
     }
@@ -169,7 +171,20 @@ public class UserService {
     }
 
 
+    public void createAdmin(UserDto userDto) {
+        log.info("Creating user in processing...");
+        Role role = roleRepository.findById(2L)
+                .orElseThrow(() -> new NoSuchElementException("Role not found"));
+        User user = User.builder()
+                .email(userDto.getEmail())
+                .password(encoder.encode(userDto.getPassword()))
+                .role(role)
+                .enabled(true)
+                .phoneNumber(userDto.getPhoneNumber())
 
+                .build();
 
+        userRepository.save(user);
 
+    }
 }
