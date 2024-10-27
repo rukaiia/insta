@@ -25,6 +25,9 @@ public class PostDto {
         private Date createdDate;
     private int dislikeCounts;
     private int likeCounts;
+    private String status;
     private List<Comment> comments = new ArrayList<>();
+    private boolean accepted;
+    private boolean rejected;
     }
 

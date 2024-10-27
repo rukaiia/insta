@@ -41,6 +41,9 @@ public class SecurityConfig {
                 .authorizeHttpRequests(authorizeRequests -> authorizeRequests
                         .requestMatchers("/admin/register").permitAll()
                         .requestMatchers("/admin").hasAuthority("ROLE_ADMIN")
+                        .requestMatchers("/admin/**").hasAuthority("ROLE_ADMIN")
+
+
                         .requestMatchers("/posts/mypost").permitAll()
                         .requestMatchers("/auth/register").permitAll()
                         .requestMatchers("/comment","/posts/delete").permitAll()

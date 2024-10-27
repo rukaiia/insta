@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-accepted-and-rejected-to-posts
+      author: Rukaiia
+      changes:
+        - addColumn:
+            tableName: posts
+            columns:
+              - column:
+                  name: accepted
+                  type: boolean
+                  defaultValue: false
+              - column:
+                  name: rejected
+                  type: boolean
+                  defaultValue: false

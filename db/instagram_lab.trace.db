@@ -506,3 +506,72 @@ java.sql.SQLClientInfoException: Client info name 'ApplicationName' not supporte
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:840)
+2024-10-27 11:39:01 jdbc[3]: exception
+java.sql.SQLClientInfoException: Client info name 'ApplicationName' not supported.
+	at org.h2.jdbc.JdbcConnection.setClientInfo(JdbcConnection.java:1573)
+	at com.intellij.database.remote.jdbc.impl.RemoteConnectionImpl.setClientInfo(RemoteConnectionImpl.java:469)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2024-10-27 11:39:08 jdbc[4]: exception
+java.sql.SQLClientInfoException: Client info name 'ApplicationName' not supported.
+	at org.h2.jdbc.JdbcConnection.setClientInfo(JdbcConnection.java:1573)
+	at com.intellij.database.remote.jdbc.impl.RemoteConnectionImpl.setClientInfo(RemoteConnectionImpl.java:469)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2024-10-27 11:39:08 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "COMMENT" не найдена
+Table "COMMENT" not found; SQL statement:
+SELECT t.*
+FROM PUBLIC.COMMENT t
+FETCH FIRST 501 ROWS ONLY [42102-220]
+2024-10-27 23:46:35.042789+06:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "([*]42, 4, 'Отсутствие тротуаров в новом жилом районе. Пешеходам приходится идти по дороге.', '2024-10-29', 'no_sidewalks.jpg', 7, 2, FALSE, TRUE);"; ожидалось "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]42, 4, 'Отсутствие тротуаров в новом жилом районе. Пешеходам приходится идти по дороге.', '2024-10-29', 'no_sidewalks.jpg', 7, 2, FALSE, TRUE);"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(42, 4, 'Отсутствие тротуаров в новом жилом районе. Пешеходам приходится идти по дороге.', '2024-10-29', 'no_sidewalks.jpg', 7, 2, FALSE, TRUE); [42001-230]
+2024-10-27 23:47:39.378301+06:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "([*]42, 4, 'Отсутствие тротуаров в новом жилом районе. Пешеходам приходится идти по дороге.', '2024-10-29', 'no_sidewalks.jpg', 7, 2, FALSE, TRUE);"; ожидалось "(, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "([*]42, 4, 'Отсутствие тротуаров в новом жилом районе. Пешеходам приходится идти по дороге.', '2024-10-29', 'no_sidewalks.jpg', 7, 2, FALSE, TRUE);"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(42, 4, 'Отсутствие тротуаров в новом жилом районе. Пешеходам приходится идти по дороге.', '2024-10-29', 'no_sidewalks.jpg', 7, 2, FALSE, TRUE); [42001-230]
+2024-10-27 23:48:43.482388+06:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "INSERT INTO posts (id, user_id, content, created_date, image_path, like_counts, dislike_counts, accepted, rejected) VALUES\000a                                                                                                                        (65, 1, 'Жалоба на плохое состояние дорог в центре города. Очень много ям и выбоин.', '2024-10-20', 'holes.jpg', 12, 3, TRUE, FALSE),\000a                                                                                                                        (54, 2, 'Отсутствие уличного освещения в спальных районах. Ночью небезопасно.', '2024-10-21', 'no_lights.jpg', 8, 2, FALSE, TRUE),\000a                                                                                                                        (55, 3, 'Скопление мусора в общественных местах. Городские службы не успевают убирать.', '2024-10-22', 'garbage.jpg', 15, 5, TRUE, FALSE),\000a                                                                                                                        (56, 1, 'Недостаток парковочных мест в центре города. Парковка невозможна.', '2024-10-23', 'parking_issue.jpg', 6, 1, FALSE, TRUE),\000a                                                                                                                        (57, 4, 'Шум от дорожных работ по ночам мешает спать жителям близлежащих домов.', '2024-10-24', 'night_noise.jpg', 10, 2, TRUE, FALSE),\000a                                                                                                                        (58, 5, 'Отсутствие зелёных зон для отдыха. Негде провести время на природе.', '2024-10-25', 'no_parks.jpg', 9, 4, FALSE, TRUE),\000a                                                                                                                        (59, 6, 'Прорывы трубопроводов и частые отключения воды в жилых районах.', '2024-10-26', 'water_issue.jpg', 11, 3, TRUE, FALSE),\000a                                                                                                                        (50, 2, 'Низкое качество воздуха в промышленных районах. Нужны меры по улучшению экологии.', '2024-10-27', 'air_quality.jpg', 14, 6, FALSE, TRUE),\000a                                                                                                                        (51, 3, 'Недостаток общественного транспорта в часы пик. Сложно добраться на работу.', '2024-10-28', 'public_transport.jpg', 5, 1, TRUE, FALSE),[*]"; ожидалось "ROW (, (, DEFAULT, INTERSECTS (, NOT, EXISTS, UNIQUE, INTERSECTS"
+Syntax error in SQL statement "INSERT INTO posts (id, user_id, content, created_date, image_path, like_counts, dislike_counts, accepted, rejected) VALUES\000a                                                                                                                        (65, 1, 'Жалоба на плохое состояние дорог в центре города. Очень много ям и выбоин.', '2024-10-20', 'holes.jpg', 12, 3, TRUE, FALSE),\000a                                                                                                                        (54, 2, 'Отсутствие уличного освещения в спальных районах. Ночью небезопасно.', '2024-10-21', 'no_lights.jpg', 8, 2, FALSE, TRUE),\000a                                                                                                                        (55, 3, 'Скопление мусора в общественных местах. Городские службы не успевают убирать.', '2024-10-22', 'garbage.jpg', 15, 5, TRUE, FALSE),\000a                                                                                                                        (56, 1, 'Недостаток парковочных мест в центре города. Парковка невозможна.', '2024-10-23', 'parking_issue.jpg', 6, 1, FALSE, TRUE),\000a                                                                                                                        (57, 4, 'Шум от дорожных работ по ночам мешает спать жителям близлежащих домов.', '2024-10-24', 'night_noise.jpg', 10, 2, TRUE, FALSE),\000a                                                                                                                        (58, 5, 'Отсутствие зелёных зон для отдыха. Негде провести время на природе.', '2024-10-25', 'no_parks.jpg', 9, 4, FALSE, TRUE),\000a                                                                                                                        (59, 6, 'Прорывы трубопроводов и частые отключения воды в жилых районах.', '2024-10-26', 'water_issue.jpg', 11, 3, TRUE, FALSE),\000a                                                                                                                        (50, 2, 'Низкое качество воздуха в промышленных районах. Нужны меры по улучшению экологии.', '2024-10-27', 'air_quality.jpg', 14, 6, FALSE, TRUE),\000a                                                                                                                        (51, 3, 'Недостаток общественного транспорта в часы пик. Сложно добраться на работу.', '2024-10-28', 'public_transport.jpg', 5, 1, TRUE, FALSE),[*]"; expected "ROW (, (, DEFAULT, INTERSECTS (, NOT, EXISTS, UNIQUE, INTERSECTS"; SQL statement:
+INSERT INTO posts (id, user_id, content, created_date, image_path, like_counts, dislike_counts, accepted, rejected) VALUES
+                                                                                                                        (65, 1, 'Жалоба на плохое состояние дорог в центре города. Очень много ям и выбоин.', '2024-10-20', 'holes.jpg', 12, 3, TRUE, FALSE),
+                                                                                                                        (54, 2, 'Отсутствие уличного освещения в спальных районах. Ночью небезопасно.', '2024-10-21', 'no_lights.jpg', 8, 2, FALSE, TRUE),
+                                                                                                                        (55, 3, 'Скопление мусора в общественных местах. Городские службы не успевают убирать.', '2024-10-22', 'garbage.jpg', 15, 5, TRUE, FALSE),
+                                                                                                                        (56, 1, 'Недостаток парковочных мест в центре города. Парковка невозможна.', '2024-10-23', 'parking_issue.jpg', 6, 1, FALSE, TRUE),
+                                                                                                                        (57, 4, 'Шум от дорожных работ по ночам мешает спать жителям близлежащих домов.', '2024-10-24', 'night_noise.jpg', 10, 2, TRUE, FALSE),
+                                                                                                                        (58, 5, 'Отсутствие зелёных зон для отдыха. Негде провести время на природе.', '2024-10-25', 'no_parks.jpg', 9, 4, FALSE, TRUE),
+                                                                                                                        (59, 6, 'Прорывы трубопроводов и частые отключения воды в жилых районах.', '2024-10-26', 'water_issue.jpg', 11, 3, TRUE, FALSE),
+                                                                                                                        (50, 2, 'Низкое качество воздуха в промышленных районах. Нужны меры по улучшению экологии.', '2024-10-27', 'air_quality.jpg', 14, 6, FALSE, TRUE),
+                                                                                                                        (51, 3, 'Недостаток общественного транспорта в часы пик. Сложно добраться на работу.', '2024-10-28', 'public_transport.jpg', 5, 1, TRUE, FALSE), [42001-230]

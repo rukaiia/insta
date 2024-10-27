@@ -13,6 +13,8 @@ import com.example.instagramlab.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -143,12 +145,23 @@ public class PostController {
         }
     }
 
-    @GetMapping
-    public String getAllPosts(Model model) {
-        List<Post> postList = postService.getAllPost();
-        model.addAttribute("posts", postList);
+    @GetMapping()
+    public String getAdminPage(@RequestParam(defaultValue = "0") int page,
+                               @RequestParam(defaultValue = "6") int size,
+                               Model model) {
+        Page<Post> postPage = postService.getPostsPaginated(page, size);
+
+        model.addAttribute("posts", postPage.getContent());
+
+        model.addAttribute("currentPage", page);
+        model.addAttribute("totalPages", postPage.getTotalPages());
+        model.addAttribute("pageSize", size);
+
         return "post/posts";
     }
+
+
+
 
     @GetMapping("/{userId}/posts")
     public String getUserPosts(@PathVariable Long userId, Model model) {
@@ -220,6 +233,17 @@ public class PostController {
         postService.dislikePost(postId);
         return "redirect:/posts";
 
+    }
+    @PostMapping("/{postId}/accept")
+    public String acceptPost(@PathVariable Long postId) {
+        postService.processPost(postId, true);
+        return "redirect:/admin";
+    }
+
+    @PostMapping("/{postId}/reject")
+    public String rejectPost(@PathVariable Long postId) {
+        postService.processPost(postId, false);
+        return "redirect:/admin";
     }
 
 

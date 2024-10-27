@@ -32,6 +32,8 @@ private int likeCounts;
     private int dislikeCounts;
     @OneToMany(mappedBy = "post", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Comment> comments = new ArrayList<>();
+    private boolean accepted;
+    private boolean rejected;
 
     public void addComment(Comment comment) {
         comments.add(comment);

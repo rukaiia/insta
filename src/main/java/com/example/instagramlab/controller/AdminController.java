@@ -6,12 +6,14 @@ import com.example.instagramlab.service.PostService;
 import com.example.instagramlab.service.UserService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.List;
@@ -46,9 +48,19 @@ public class AdminController {
         return "redirect:/admin";
     }
     @GetMapping()
-    public String getAdminPage(Model model){
-        List<Post> postList = postService.getAllPost();
-        model.addAttribute("posts", postList);
+    public String getAdminPage(@RequestParam(defaultValue = "0") int page,
+                               @RequestParam(defaultValue = "6") int size,
+                               Model model) {
+        Page<Post> postPage = postService.getPostsPaginated(page, size);
+
+        model.addAttribute("posts", postPage.getContent());
+
+        model.addAttribute("currentPage", page);
+        model.addAttribute("totalPages", postPage.getTotalPages());
+        model.addAttribute("pageSize", size);
+
         return "auth/admin";
     }
+
+
 }

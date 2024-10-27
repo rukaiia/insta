@@ -6,46 +6,70 @@
     <title>Посты пользователя</title>
     <style>
         body {
-            background-color: #121212;
-            color: white;
+            background-color: #FFFFFF;
+            color: #333333;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         h1 {
-            text-align: center;
-            color: #FFD700;
+            color: #444444;
+            margin-bottom: 20px;
+            font-size: 2.5em;
         }
 
         ul {
             list-style-type: none;
             padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
         }
 
         li {
-            border: 1px solid #444;
-            border-radius: 5px;
-            padding: 15px;
-            margin: 10px 0;
-            background-color: #222;
+            background-color: #F4F4F4;
+            border-radius: 10px;
+            padding: 20px;
+            width: 320px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        li:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
         }
 
         h2 {
-            margin: 0 0 10px 0;
-            color: #FFD700;
+            margin: 0;
+            color: #444444;
+            font-size: 1.5em;
+            text-align: center;
         }
 
         img {
-            max-width: 100%;
-            height: auto;
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
             border-radius: 5px;
+            margin-top: 10px;
         }
 
         a {
             color: #1E90FF;
             text-decoration: none;
             font-weight: bold;
+            text-align: center;
+            margin-top: auto;
         }
 
         a:hover {
@@ -54,13 +78,14 @@
 
         p {
             margin: 5px 0;
+            text-align: center;
         }
 
         .back-link {
             display: block;
             text-align: center;
             margin-top: 20px;
-            color: #FFD700;
+            color: #27AE60;
             font-weight: bold;
         }
 
@@ -77,15 +102,13 @@
         <#list posts as post>
             <li>
                 <h2>${post.content}</h2>
-                <a href="/posts/${post.id}">Посмотреть пост</a>
                 <#if post.imagePath?has_content>
-                    <img src="/uploads/${post.imagePath}" alt="Post Image">
-                    <p id="like-count">${post.likeCounts} лайков</p>
-
+                    <img src="/uploads/${post.imagePath}" alt="Изображение поста">
                 <#else>
-
                     <p>Изображение недоступно</p>
                 </#if>
+                <p id="like-count">${post.likeCounts} лайков</p>
+                <a href="/posts/${post.id}">Посмотреть пост</a>
             </li>
         </#list>
     </ul>
@@ -96,4 +119,5 @@
 <a href="/posts" class="back-link">Назад к всем постам</a>
 </body>
 </html>
+
 

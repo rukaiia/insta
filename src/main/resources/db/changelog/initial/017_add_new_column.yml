@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - changeSet:
+      id: 017
+      author: Rukaiia
+      changes:
+        - addColumn:
+            tableName: posts
+            columns:
+              - column:
+                  name: status
+                  type: varchar(255)

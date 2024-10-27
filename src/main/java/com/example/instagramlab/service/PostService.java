@@ -1,17 +1,21 @@
 package com.example.instagramlab.service;
 
 import com.example.instagramlab.dto.PostDto;
+import com.example.instagramlab.exeptions.ResourceNotFoundException;
 import com.example.instagramlab.model.Post;
 import com.example.instagramlab.model.User;
 import com.example.instagramlab.repository.PostRepository;
 import com.example.instagramlab.repository.UserRepository;
+import jakarta.persistence.EntityNotFoundException;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
-import org.springdoc.core.service.SecurityService;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.parameters.P;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
@@ -116,4 +120,47 @@ public class PostService {
         post.setDislikeCounts(post.getDislikeCounts()  + 1);
         return postRepository.save(post);
     }
+    public void update(PostDto postDto) {
+        Post existingPost = postRepository.findById(postDto.getId())
+                .orElseThrow(() -> new ResourceNotFoundException("Post not found with id " + postDto.getId()));
+
+        existingPost.setContent(postDto.getContent());
+        existingPost.setImagePath(postDto.getImagePath());
+
+        postRepository.save(existingPost);
+    }
+
+//    @Transactional
+//    public void updatePostStatus(Long postId, String status) {
+//        Post post = postRepository.findById(postId).orElseThrow(() -> new RuntimeException("Post not found"));
+//        post.setStatus(status);
+//        postRepository.save(post);
+//    }
+
+
+    @Transactional
+    public void processPost(Long postId, boolean accepted) {
+        Post post = postRepository.findById(postId)
+                .orElseThrow(() -> new EntityNotFoundException("Post not found"));
+
+        if (accepted) {
+            post.setAccepted(true);
+            post.setRejected(false);
+        } else {
+            post.setRejected(true);
+            post.setAccepted(false);
+        }
+
+        postRepository.save(post);
+    }
+
+    public Page<Post> getAllPosts(Pageable pageable) {
+        return postRepository.findAll(pageable);
+    }
+
+    public Page<Post> getPostsPaginated(int page, int size) {
+        Pageable pageable = PageRequest.of(page, size);
+        return postRepository.findAll(pageable);
+    }
+
 }
