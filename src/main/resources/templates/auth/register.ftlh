@@ -3,17 +3,20 @@
 <@layout.layout ; spring>
     <style>
         body {
-            background-image: url('https://images.unsplash.com/photo-1511825300125-90c7a78b2e53?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwyMDg4NDB8MHwxfGFsbHwxfHx8fHx8fHwxNjEyMzIzNTI3&ixlib=rb-1.2.1&q=80&w=1080'); /* Замените URL на ваше изображение */
-            background-size: cover;
-            background-position: center;
+            /*background-image: url('https://images.unsplash.com/photo-1511825300125-90c7a78b2e53?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwyMDg4NDB8MHwxfGFsbHwxfHx8fHx8fHwxNjEyMzIzNTI3&ixlib=rb-1.2.1&q=80&w=1080'); !* Замените URL на ваше изображение *!*/
+            /*background-size: cover;*/
+            /*background-position: center;*/
             height: 100vh;
             color: #ffffff;
+            background: linear-gradient(#ff5e62, #ff9966);
         }
 
+
         .card {
-            background-color: rgb(11, 79, 37);
+            background-color: floralwhite;
             border-radius: 15px;
             backdrop-filter: blur(10px);
+            color: #121212;
         }
 
         .btn-primary {

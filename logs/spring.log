@@ -2101,3 +2101,463 @@ Was expecting one of these patterns:
 2024-10-28T01:07:31.014+06:00  INFO 11372 --- [InstagramLab] [http-nio-8089-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2024-10-28T01:07:31.016+06:00  INFO 11372 --- [InstagramLab] [http-nio-8089-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
 2024-10-28T01:07:43.021+06:00  INFO 11372 --- [InstagramLab] [http-nio-8089-exec-5] c.e.i.service.AuthUserDetailsService     : user with email: rrrrraimberdievarukaya@gmail.comfound successfully
+2024-10-28T01:54:59.769+06:00  WARN 11372 --- [InstagramLab] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=26m4s472ms511µs600ns).
+2024-10-28T02:17:57.465+06:00  WARN 11372 --- [InstagramLab] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m57s430ms876µs500ns).
+2024-10-28T05:18:56.942+06:00  WARN 11372 --- [InstagramLab] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3h29s476ms22µs500ns).
+2024-10-28T10:56:07.880+06:00  WARN 11372 --- [InstagramLab] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5h37m14s181ms772µs300ns).
+2024-10-28T12:49:41.957+06:00  WARN 11372 --- [InstagramLab] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h49m4s155ms742µs500ns).
+2024-10-28T12:50:22.893+06:00  INFO 11372 --- [InstagramLab] [http-nio-8089-exec-5] c.e.i.service.AuthUserDetailsService     : user with email: raimberdievarukaya@gmail.comfound successfully
+2024-10-28T12:50:30.101+06:00  INFO 11372 --- [InstagramLab] [http-nio-8089-exec-6] c.e.i.service.AuthUserDetailsService     : user with email: raimberdievarukaya@gmail.comfound successfully
+2024-10-28T12:50:39.439+06:00  INFO 11372 --- [InstagramLab] [http-nio-8089-exec-8] c.e.i.service.AuthUserDetailsService     : user with email: raimberdievarukaya@gmail.comfound successfully
+2024-10-28T12:50:58.988+06:00  INFO 11372 --- [InstagramLab] [http-nio-8089-exec-10] c.e.i.service.AuthUserDetailsService     : user with email: rrrrraimberdievarukaya@gmail.comfound successfully
+2024-10-28T12:53:11.406+06:00  INFO 11372 --- [InstagramLab] [http-nio-8089-exec-6] c.e.instagramlab.service.PostService     : post with id: 50 found
+2024-10-28T12:53:31.057+06:00  WARN 11372 --- [InstagramLab] [http-nio-8089-exec-8] o.s.web.servlet.PageNotFound             : No mapping for GET /posts50post/comments
+2024-10-28T12:53:31.061+06:00  WARN 11372 --- [InstagramLab] [http-nio-8089-exec-8] o.s.web.servlet.PageNotFound             : No endpoint GET /posts50post/comments.
+2024-10-28T12:53:39.261+06:00  INFO 11372 --- [InstagramLab] [http-nio-8089-exec-1] c.e.instagramlab.service.PostService     : post with id: 50 found
+2024-10-28T12:53:42.978+06:00  INFO 11372 --- [InstagramLab] [http-nio-8089-exec-2] c.e.instagramlab.service.PostService     : post with id: 50 found
+2024-10-28T12:53:46.965+06:00  INFO 11372 --- [InstagramLab] [http-nio-8089-exec-10] c.e.instagramlab.service.PostService     : post with id: 50 found
+2024-10-28T12:54:58.828+06:00  INFO 11372 --- [InstagramLab] [http-nio-8089-exec-7] c.e.i.service.AuthUserDetailsService     : user with email: rrrrraimberdievarukaya@gmail.comfound successfully
+2024-10-28T13:00:26.394+06:00  INFO 11372 --- [InstagramLab] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-28T13:00:26.490+06:00  INFO 11372 --- [InstagramLab] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-28T13:00:26.498+06:00  INFO 11372 --- [InstagramLab] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-28T13:00:43.914+06:00  INFO 5440 --- [InstagramLab] [main] c.e.i.InstagramlabApplication            : Starting InstagramlabApplication using Java 21.0.2 with PID 5440 (C:\Users\User\Desktop\instagramlab\target\classes started by User in C:\Users\User\Desktop\instagramlab)
+2024-10-28T13:00:43.918+06:00  INFO 5440 --- [InstagramLab] [main] c.e.i.InstagramlabApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-10-28T13:00:45.422+06:00  INFO 5440 --- [InstagramLab] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-28T13:00:45.535+06:00  INFO 5440 --- [InstagramLab] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 98 ms. Found 4 JPA repository interfaces.
+2024-10-28T13:00:46.363+06:00  INFO 5440 --- [InstagramLab] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8089 (http)
+2024-10-28T13:00:46.383+06:00  INFO 5440 --- [InstagramLab] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-28T13:00:46.383+06:00  INFO 5440 --- [InstagramLab] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-28T13:00:46.472+06:00  INFO 5440 --- [InstagramLab] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-28T13:00:46.472+06:00  INFO 5440 --- [InstagramLab] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2480 ms
+2024-10-28T13:00:46.698+06:00  INFO 5440 --- [InstagramLab] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-28T13:00:47.153+06:00  INFO 5440 --- [InstagramLab] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:./db/instagram_lab user=ROOT
+2024-10-28T13:00:47.158+06:00  INFO 5440 --- [InstagramLab] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-28T13:00:47.251+06:00  INFO 5440 --- [InstagramLab] [main] liquibase.database                       : Set default schema name to PUBLIC
+2024-10-28T13:00:47.683+06:00  INFO 5440 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/001_create_table_user.yml
+2024-10-28T13:00:47.701+06:00  INFO 5440 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/002_create_table_roles.yml
+2024-10-28T13:00:47.707+06:00  INFO 5440 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/003_insert_into_roles_and_users_tables.sql
+2024-10-28T13:00:47.710+06:00  INFO 5440 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/004_create_table_posts.yaml
+2024-10-28T13:00:47.717+06:00  INFO 5440 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/005_delete_table.yaml
+2024-10-28T13:00:47.721+06:00  INFO 5440 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/006_create_new_table_posts.yaml
+2024-10-28T13:00:47.726+06:00  INFO 5440 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/007_add_column.yaml
+2024-10-28T13:00:47.729+06:00  INFO 5440 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/009_delete.yml.yml
+2024-10-28T13:00:47.734+06:00  INFO 5440 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/012_add_column_to_post.yml
+2024-10-28T13:00:47.738+06:00  INFO 5440 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/012_delete.yml.yml
+2024-10-28T13:00:47.740+06:00  INFO 5440 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/014_add_column.yml
+2024-10-28T13:00:47.743+06:00  INFO 5440 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/015_add_column.yml
+2024-10-28T13:00:47.744+06:00  INFO 5440 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/016_add_new_columns_to_users.yml
+2024-10-28T13:00:47.749+06:00  INFO 5440 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/017_add_new_column.yml
+2024-10-28T13:00:47.753+06:00  INFO 5440 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/018_delete.yml
+2024-10-28T13:00:47.755+06:00  INFO 5440 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/019_create.yml
+2024-10-28T13:00:47.758+06:00  INFO 5440 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/020_create.yml
+2024-10-28T13:00:47.763+06:00  INFO 5440 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/delete.sql
+2024-10-28T13:00:47.766+06:00  INFO 5440 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/insert3.sql
+2024-10-28T13:00:47.770+06:00  INFO 5440 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/insert5.sql
+2024-10-28T13:00:47.773+06:00  INFO 5440 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/instagramlab.zip
+2024-10-28T13:00:47.774+06:00  WARN 5440 --- [InstagramLab] [main] liquibase.changelog                      : included file db/changelog/initial/instagramlab.zip/db/changelog/initial/instagramlab.zip is not a recognized file type
+2024-10-28T13:00:47.984+06:00  INFO 5440 --- [InstagramLab] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2024-10-28T13:00:48.087+06:00  INFO 5440 --- [InstagramLab] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2024-10-28T13:00:48.090+06:00  INFO 5440 --- [InstagramLab] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2024-10-28T13:00:48.106+06:00  INFO 5440 --- [InstagramLab] [main] liquibase.util                           : UPDATE SUMMARY
+2024-10-28T13:00:48.106+06:00  INFO 5440 --- [InstagramLab] [main] liquibase.util                           : Run:                          0
+2024-10-28T13:00:48.106+06:00  INFO 5440 --- [InstagramLab] [main] liquibase.util                           : Previously run:              20
+2024-10-28T13:00:48.106+06:00  INFO 5440 --- [InstagramLab] [main] liquibase.util                           : Filtered out:                 0
+2024-10-28T13:00:48.106+06:00  INFO 5440 --- [InstagramLab] [main] liquibase.util                           : -------------------------------
+2024-10-28T13:00:48.106+06:00  INFO 5440 --- [InstagramLab] [main] liquibase.util                           : Total change sets:           20
+2024-10-28T13:00:48.108+06:00  INFO 5440 --- [InstagramLab] [main] liquibase.util                           : Update summary generated
+2024-10-28T13:00:48.138+06:00  INFO 5440 --- [InstagramLab] [main] liquibase.lockservice                    : Successfully released change log lock
+2024-10-28T13:00:48.140+06:00  INFO 5440 --- [InstagramLab] [main] liquibase.command                        : Command execution complete
+2024-10-28T13:00:48.283+06:00  INFO 5440 --- [InstagramLab] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-28T13:00:48.397+06:00  INFO 5440 --- [InstagramLab] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-28T13:00:48.450+06:00  INFO 5440 --- [InstagramLab] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-28T13:00:48.950+06:00  INFO 5440 --- [InstagramLab] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-28T13:00:50.688+06:00  INFO 5440 --- [InstagramLab] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-28T13:00:50.734+06:00  INFO 5440 --- [InstagramLab] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-28T13:00:51.509+06:00  WARN 5440 --- [InstagramLab] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-28T13:00:51.540+06:00  INFO 5440 --- [InstagramLab] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name authUserDetailsService
+2024-10-28T13:00:52.554+06:00  INFO 5440 --- [InstagramLab] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8089 (http) with context path '/'
+2024-10-28T13:00:52.565+06:00  INFO 5440 --- [InstagramLab] [main] c.e.i.InstagramlabApplication            : Started InstagramlabApplication in 9.456 seconds (process running for 10.737)
+2024-10-28T13:01:05.198+06:00  INFO 5440 --- [InstagramLab] [http-nio-8089-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-28T13:01:05.198+06:00  INFO 5440 --- [InstagramLab] [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-28T13:01:05.214+06:00  INFO 5440 --- [InstagramLab] [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-10-28T13:01:11.125+06:00  INFO 5440 --- [InstagramLab] [http-nio-8089-exec-7] c.e.instagramlab.service.PostService     : post with id: 36 found
+2024-10-28T14:26:08.836+06:00  WARN 5440 --- [InstagramLab] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h23m51s625ms537µs100ns).
+2024-10-28T14:39:21.818+06:00  INFO 5440 --- [InstagramLab] [http-nio-8089-exec-10] c.e.instagramlab.service.PostService     : post with id: 36 found
+2024-10-28T14:44:11.862+06:00  INFO 5440 --- [InstagramLab] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-28T14:44:12.016+06:00  INFO 5440 --- [InstagramLab] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-28T14:44:12.067+06:00  INFO 5440 --- [InstagramLab] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-28T14:44:28.132+06:00  INFO 23164 --- [InstagramLab] [main] c.e.i.InstagramlabApplication            : Starting InstagramlabApplication using Java 21.0.2 with PID 23164 (C:\Users\User\Desktop\instagramlab\target\classes started by User in C:\Users\User\Desktop\instagramlab)
+2024-10-28T14:44:28.136+06:00  INFO 23164 --- [InstagramLab] [main] c.e.i.InstagramlabApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-10-28T14:44:29.642+06:00  INFO 23164 --- [InstagramLab] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-28T14:44:29.763+06:00  INFO 23164 --- [InstagramLab] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 106 ms. Found 4 JPA repository interfaces.
+2024-10-28T14:44:30.686+06:00  INFO 23164 --- [InstagramLab] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8089 (http)
+2024-10-28T14:44:30.707+06:00  INFO 23164 --- [InstagramLab] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-28T14:44:30.708+06:00  INFO 23164 --- [InstagramLab] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-28T14:44:30.815+06:00  INFO 23164 --- [InstagramLab] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-28T14:44:30.816+06:00  INFO 23164 --- [InstagramLab] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2608 ms
+2024-10-28T14:44:31.067+06:00  INFO 23164 --- [InstagramLab] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-28T14:44:31.560+06:00  INFO 23164 --- [InstagramLab] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:./db/instagram_lab user=ROOT
+2024-10-28T14:44:31.563+06:00  INFO 23164 --- [InstagramLab] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-28T14:44:31.666+06:00  INFO 23164 --- [InstagramLab] [main] liquibase.database                       : Set default schema name to PUBLIC
+2024-10-28T14:44:32.139+06:00  INFO 23164 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/001_create_table_user.yml
+2024-10-28T14:44:32.158+06:00  INFO 23164 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/002_create_table_roles.yml
+2024-10-28T14:44:32.163+06:00  INFO 23164 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/003_insert_into_roles_and_users_tables.sql
+2024-10-28T14:44:32.167+06:00  INFO 23164 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/004_create_table_posts.yaml
+2024-10-28T14:44:32.174+06:00  INFO 23164 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/005_delete_table.yaml
+2024-10-28T14:44:32.178+06:00  INFO 23164 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/006_create_new_table_posts.yaml
+2024-10-28T14:44:32.184+06:00  INFO 23164 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/007_add_column.yaml
+2024-10-28T14:44:32.188+06:00  INFO 23164 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/009_delete.yml.yml
+2024-10-28T14:44:32.191+06:00  INFO 23164 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/012_add_column_to_post.yml
+2024-10-28T14:44:32.194+06:00  INFO 23164 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/012_delete.yml.yml
+2024-10-28T14:44:32.198+06:00  INFO 23164 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/014_add_column.yml
+2024-10-28T14:44:32.201+06:00  INFO 23164 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/015_add_column.yml
+2024-10-28T14:44:32.204+06:00  INFO 23164 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/016_add_new_columns_to_users.yml
+2024-10-28T14:44:32.208+06:00  INFO 23164 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/017_add_new_column.yml
+2024-10-28T14:44:32.211+06:00  INFO 23164 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/018_delete.yml
+2024-10-28T14:44:32.214+06:00  INFO 23164 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/019_create.yml
+2024-10-28T14:44:32.217+06:00  INFO 23164 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/020_create.yml
+2024-10-28T14:44:32.222+06:00  INFO 23164 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/delete.sql
+2024-10-28T14:44:32.227+06:00  INFO 23164 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/insert3.sql
+2024-10-28T14:44:32.231+06:00  INFO 23164 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/insert5.sql
+2024-10-28T14:44:32.236+06:00  INFO 23164 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/instagramlab.zip
+2024-10-28T14:44:32.237+06:00  WARN 23164 --- [InstagramLab] [main] liquibase.changelog                      : included file db/changelog/initial/instagramlab.zip/db/changelog/initial/instagramlab.zip is not a recognized file type
+2024-10-28T14:44:32.446+06:00  INFO 23164 --- [InstagramLab] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2024-10-28T14:44:32.547+06:00  INFO 23164 --- [InstagramLab] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2024-10-28T14:44:32.549+06:00  INFO 23164 --- [InstagramLab] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2024-10-28T14:44:32.565+06:00  INFO 23164 --- [InstagramLab] [main] liquibase.util                           : UPDATE SUMMARY
+2024-10-28T14:44:32.565+06:00  INFO 23164 --- [InstagramLab] [main] liquibase.util                           : Run:                          0
+2024-10-28T14:44:32.565+06:00  INFO 23164 --- [InstagramLab] [main] liquibase.util                           : Previously run:              20
+2024-10-28T14:44:32.565+06:00  INFO 23164 --- [InstagramLab] [main] liquibase.util                           : Filtered out:                 0
+2024-10-28T14:44:32.565+06:00  INFO 23164 --- [InstagramLab] [main] liquibase.util                           : -------------------------------
+2024-10-28T14:44:32.566+06:00  INFO 23164 --- [InstagramLab] [main] liquibase.util                           : Total change sets:           20
+2024-10-28T14:44:32.567+06:00  INFO 23164 --- [InstagramLab] [main] liquibase.util                           : Update summary generated
+2024-10-28T14:44:32.600+06:00  INFO 23164 --- [InstagramLab] [main] liquibase.lockservice                    : Successfully released change log lock
+2024-10-28T14:44:32.602+06:00  INFO 23164 --- [InstagramLab] [main] liquibase.command                        : Command execution complete
+2024-10-28T14:44:32.744+06:00  INFO 23164 --- [InstagramLab] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-28T14:44:32.851+06:00  INFO 23164 --- [InstagramLab] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-28T14:44:32.906+06:00  INFO 23164 --- [InstagramLab] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-28T14:44:33.469+06:00  INFO 23164 --- [InstagramLab] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-28T14:44:35.306+06:00  INFO 23164 --- [InstagramLab] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-28T14:44:35.371+06:00  INFO 23164 --- [InstagramLab] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-28T14:44:36.245+06:00  WARN 23164 --- [InstagramLab] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-28T14:44:36.273+06:00  INFO 23164 --- [InstagramLab] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name authUserDetailsService
+2024-10-28T14:44:37.280+06:00  INFO 23164 --- [InstagramLab] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8089 (http) with context path '/'
+2024-10-28T14:44:37.294+06:00  INFO 23164 --- [InstagramLab] [main] c.e.i.InstagramlabApplication            : Started InstagramlabApplication in 9.959 seconds (process running for 11.257)
+2024-10-28T14:44:59.229+06:00  INFO 23164 --- [InstagramLab] [http-nio-8089-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-28T14:44:59.229+06:00  INFO 23164 --- [InstagramLab] [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-28T14:44:59.231+06:00  INFO 23164 --- [InstagramLab] [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-10-28T14:45:59.941+06:00  INFO 23164 --- [InstagramLab] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-28T14:46:00.026+06:00  INFO 23164 --- [InstagramLab] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-28T14:46:00.040+06:00  INFO 23164 --- [InstagramLab] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-28T14:46:09.191+06:00  INFO 21744 --- [InstagramLab] [main] c.e.i.InstagramlabApplication            : Starting InstagramlabApplication using Java 21.0.2 with PID 21744 (C:\Users\User\Desktop\instagramlab\target\classes started by User in C:\Users\User\Desktop\instagramlab)
+2024-10-28T14:46:09.195+06:00  INFO 21744 --- [InstagramLab] [main] c.e.i.InstagramlabApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-10-28T14:46:10.666+06:00  INFO 21744 --- [InstagramLab] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-28T14:46:10.783+06:00  INFO 21744 --- [InstagramLab] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 103 ms. Found 4 JPA repository interfaces.
+2024-10-28T14:46:11.639+06:00  INFO 21744 --- [InstagramLab] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8089 (http)
+2024-10-28T14:46:11.665+06:00  INFO 21744 --- [InstagramLab] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-28T14:46:11.667+06:00  INFO 21744 --- [InstagramLab] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-28T14:46:11.778+06:00  INFO 21744 --- [InstagramLab] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-28T14:46:11.778+06:00  INFO 21744 --- [InstagramLab] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2509 ms
+2024-10-28T14:46:12.026+06:00  INFO 21744 --- [InstagramLab] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-28T14:46:12.477+06:00  INFO 21744 --- [InstagramLab] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:./db/instagram_lab user=ROOT
+2024-10-28T14:46:12.480+06:00  INFO 21744 --- [InstagramLab] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-28T14:46:12.566+06:00  INFO 21744 --- [InstagramLab] [main] liquibase.database                       : Set default schema name to PUBLIC
+2024-10-28T14:46:13.021+06:00  INFO 21744 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/001_create_table_user.yml
+2024-10-28T14:46:13.040+06:00  INFO 21744 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/002_create_table_roles.yml
+2024-10-28T14:46:13.046+06:00  INFO 21744 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/003_insert_into_roles_and_users_tables.sql
+2024-10-28T14:46:13.050+06:00  INFO 21744 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/004_create_table_posts.yaml
+2024-10-28T14:46:13.057+06:00  INFO 21744 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/005_delete_table.yaml
+2024-10-28T14:46:13.061+06:00  INFO 21744 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/006_create_new_table_posts.yaml
+2024-10-28T14:46:13.068+06:00  INFO 21744 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/007_add_column.yaml
+2024-10-28T14:46:13.072+06:00  INFO 21744 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/009_delete.yml.yml
+2024-10-28T14:46:13.074+06:00  INFO 21744 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/012_add_column_to_post.yml
+2024-10-28T14:46:13.077+06:00  INFO 21744 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/012_delete.yml.yml
+2024-10-28T14:46:13.081+06:00  INFO 21744 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/014_add_column.yml
+2024-10-28T14:46:13.084+06:00  INFO 21744 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/015_add_column.yml
+2024-10-28T14:46:13.087+06:00  INFO 21744 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/016_add_new_columns_to_users.yml
+2024-10-28T14:46:13.090+06:00  INFO 21744 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/017_add_new_column.yml
+2024-10-28T14:46:13.093+06:00  INFO 21744 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/018_delete.yml
+2024-10-28T14:46:13.096+06:00  INFO 21744 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/019_create.yml
+2024-10-28T14:46:13.099+06:00  INFO 21744 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/020_create.yml
+2024-10-28T14:46:13.105+06:00  INFO 21744 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/delete.sql
+2024-10-28T14:46:13.107+06:00  INFO 21744 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/insert3.sql
+2024-10-28T14:46:13.111+06:00  INFO 21744 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/insert5.sql
+2024-10-28T14:46:13.115+06:00  INFO 21744 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/instagramlab.zip
+2024-10-28T14:46:13.116+06:00  WARN 21744 --- [InstagramLab] [main] liquibase.changelog                      : included file db/changelog/initial/instagramlab.zip/db/changelog/initial/instagramlab.zip is not a recognized file type
+2024-10-28T14:46:13.310+06:00  INFO 21744 --- [InstagramLab] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2024-10-28T14:46:13.416+06:00  INFO 21744 --- [InstagramLab] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2024-10-28T14:46:13.418+06:00  INFO 21744 --- [InstagramLab] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2024-10-28T14:46:13.437+06:00  INFO 21744 --- [InstagramLab] [main] liquibase.util                           : UPDATE SUMMARY
+2024-10-28T14:46:13.437+06:00  INFO 21744 --- [InstagramLab] [main] liquibase.util                           : Run:                          0
+2024-10-28T14:46:13.438+06:00  INFO 21744 --- [InstagramLab] [main] liquibase.util                           : Previously run:              20
+2024-10-28T14:46:13.438+06:00  INFO 21744 --- [InstagramLab] [main] liquibase.util                           : Filtered out:                 0
+2024-10-28T14:46:13.438+06:00  INFO 21744 --- [InstagramLab] [main] liquibase.util                           : -------------------------------
+2024-10-28T14:46:13.438+06:00  INFO 21744 --- [InstagramLab] [main] liquibase.util                           : Total change sets:           20
+2024-10-28T14:46:13.440+06:00  INFO 21744 --- [InstagramLab] [main] liquibase.util                           : Update summary generated
+2024-10-28T14:46:13.474+06:00  INFO 21744 --- [InstagramLab] [main] liquibase.lockservice                    : Successfully released change log lock
+2024-10-28T14:46:13.476+06:00  INFO 21744 --- [InstagramLab] [main] liquibase.command                        : Command execution complete
+2024-10-28T14:46:13.632+06:00  INFO 21744 --- [InstagramLab] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-28T14:46:13.752+06:00  INFO 21744 --- [InstagramLab] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-28T14:46:13.816+06:00  INFO 21744 --- [InstagramLab] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-28T14:46:14.303+06:00  INFO 21744 --- [InstagramLab] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-28T14:46:16.083+06:00  INFO 21744 --- [InstagramLab] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-28T14:46:16.127+06:00  INFO 21744 --- [InstagramLab] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-28T14:46:17.292+06:00  WARN 21744 --- [InstagramLab] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-28T14:46:17.329+06:00  INFO 21744 --- [InstagramLab] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name authUserDetailsService
+2024-10-28T14:46:18.478+06:00  INFO 21744 --- [InstagramLab] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8089 (http) with context path '/'
+2024-10-28T14:46:18.490+06:00  INFO 21744 --- [InstagramLab] [main] c.e.i.InstagramlabApplication            : Started InstagramlabApplication in 10.114 seconds (process running for 11.471)
+2024-10-28T14:46:23.545+06:00  INFO 21744 --- [InstagramLab] [http-nio-8089-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-28T14:46:23.545+06:00  INFO 21744 --- [InstagramLab] [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-28T14:46:23.548+06:00  INFO 21744 --- [InstagramLab] [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-10-28T14:48:55.290+06:00  INFO 21744 --- [InstagramLab] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-28T14:48:55.349+06:00  INFO 21744 --- [InstagramLab] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-28T14:48:55.360+06:00  INFO 21744 --- [InstagramLab] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-28T14:49:04.600+06:00  INFO 24032 --- [InstagramLab] [main] c.e.i.InstagramlabApplication            : Starting InstagramlabApplication using Java 21.0.2 with PID 24032 (C:\Users\User\Desktop\instagramlab\target\classes started by User in C:\Users\User\Desktop\instagramlab)
+2024-10-28T14:49:04.605+06:00  INFO 24032 --- [InstagramLab] [main] c.e.i.InstagramlabApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-10-28T14:49:06.012+06:00  INFO 24032 --- [InstagramLab] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-28T14:49:06.139+06:00  INFO 24032 --- [InstagramLab] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 113 ms. Found 4 JPA repository interfaces.
+2024-10-28T14:49:07.124+06:00  INFO 24032 --- [InstagramLab] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8089 (http)
+2024-10-28T14:49:07.153+06:00  INFO 24032 --- [InstagramLab] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-28T14:49:07.155+06:00  INFO 24032 --- [InstagramLab] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-28T14:49:07.264+06:00  INFO 24032 --- [InstagramLab] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-28T14:49:07.264+06:00  INFO 24032 --- [InstagramLab] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2595 ms
+2024-10-28T14:49:07.504+06:00  INFO 24032 --- [InstagramLab] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-28T14:49:08.023+06:00  INFO 24032 --- [InstagramLab] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:./db/instagram_lab user=ROOT
+2024-10-28T14:49:08.026+06:00  INFO 24032 --- [InstagramLab] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-28T14:49:08.116+06:00  INFO 24032 --- [InstagramLab] [main] liquibase.database                       : Set default schema name to PUBLIC
+2024-10-28T14:49:08.588+06:00  INFO 24032 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/001_create_table_user.yml
+2024-10-28T14:49:08.619+06:00  INFO 24032 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/002_create_table_roles.yml
+2024-10-28T14:49:08.624+06:00  INFO 24032 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/003_insert_into_roles_and_users_tables.sql
+2024-10-28T14:49:08.629+06:00  INFO 24032 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/004_create_table_posts.yaml
+2024-10-28T14:49:08.635+06:00  INFO 24032 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/005_delete_table.yaml
+2024-10-28T14:49:08.641+06:00  INFO 24032 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/006_create_new_table_posts.yaml
+2024-10-28T14:49:08.647+06:00  INFO 24032 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/007_add_column.yaml
+2024-10-28T14:49:08.651+06:00  INFO 24032 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/009_delete.yml.yml
+2024-10-28T14:49:08.654+06:00  INFO 24032 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/012_add_column_to_post.yml
+2024-10-28T14:49:08.657+06:00  INFO 24032 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/012_delete.yml.yml
+2024-10-28T14:49:08.660+06:00  INFO 24032 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/014_add_column.yml
+2024-10-28T14:49:08.664+06:00  INFO 24032 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/015_add_column.yml
+2024-10-28T14:49:08.667+06:00  INFO 24032 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/016_add_new_columns_to_users.yml
+2024-10-28T14:49:08.670+06:00  INFO 24032 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/017_add_new_column.yml
+2024-10-28T14:49:08.674+06:00  INFO 24032 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/018_delete.yml
+2024-10-28T14:49:08.677+06:00  INFO 24032 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/019_create.yml
+2024-10-28T14:49:08.680+06:00  INFO 24032 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/020_create.yml
+2024-10-28T14:49:08.687+06:00  INFO 24032 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/delete.sql
+2024-10-28T14:49:08.690+06:00  INFO 24032 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/insert3.sql
+2024-10-28T14:49:08.694+06:00  INFO 24032 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/insert5.sql
+2024-10-28T14:49:08.697+06:00  INFO 24032 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/instagramlab.zip
+2024-10-28T14:49:08.699+06:00  WARN 24032 --- [InstagramLab] [main] liquibase.changelog                      : included file db/changelog/initial/instagramlab.zip/db/changelog/initial/instagramlab.zip is not a recognized file type
+2024-10-28T14:49:08.933+06:00  INFO 24032 --- [InstagramLab] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2024-10-28T14:49:09.046+06:00  INFO 24032 --- [InstagramLab] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2024-10-28T14:49:09.047+06:00  INFO 24032 --- [InstagramLab] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2024-10-28T14:49:09.066+06:00  INFO 24032 --- [InstagramLab] [main] liquibase.util                           : UPDATE SUMMARY
+2024-10-28T14:49:09.066+06:00  INFO 24032 --- [InstagramLab] [main] liquibase.util                           : Run:                          0
+2024-10-28T14:49:09.067+06:00  INFO 24032 --- [InstagramLab] [main] liquibase.util                           : Previously run:              20
+2024-10-28T14:49:09.067+06:00  INFO 24032 --- [InstagramLab] [main] liquibase.util                           : Filtered out:                 0
+2024-10-28T14:49:09.067+06:00  INFO 24032 --- [InstagramLab] [main] liquibase.util                           : -------------------------------
+2024-10-28T14:49:09.067+06:00  INFO 24032 --- [InstagramLab] [main] liquibase.util                           : Total change sets:           20
+2024-10-28T14:49:09.069+06:00  INFO 24032 --- [InstagramLab] [main] liquibase.util                           : Update summary generated
+2024-10-28T14:49:09.096+06:00  INFO 24032 --- [InstagramLab] [main] liquibase.lockservice                    : Successfully released change log lock
+2024-10-28T14:49:09.098+06:00  INFO 24032 --- [InstagramLab] [main] liquibase.command                        : Command execution complete
+2024-10-28T14:49:09.232+06:00  INFO 24032 --- [InstagramLab] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-28T14:49:09.339+06:00  INFO 24032 --- [InstagramLab] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-28T14:49:09.397+06:00  INFO 24032 --- [InstagramLab] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-28T14:49:09.918+06:00  INFO 24032 --- [InstagramLab] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-28T14:49:11.576+06:00  INFO 24032 --- [InstagramLab] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-28T14:49:11.626+06:00  INFO 24032 --- [InstagramLab] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-28T14:49:12.436+06:00  WARN 24032 --- [InstagramLab] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-28T14:49:12.470+06:00  INFO 24032 --- [InstagramLab] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name authUserDetailsService
+2024-10-28T14:49:13.463+06:00  INFO 24032 --- [InstagramLab] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8089 (http) with context path '/'
+2024-10-28T14:49:13.474+06:00  INFO 24032 --- [InstagramLab] [main] c.e.i.InstagramlabApplication            : Started InstagramlabApplication in 9.614 seconds (process running for 10.757)
+2024-10-28T14:49:31.007+06:00  INFO 24032 --- [InstagramLab] [http-nio-8089-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-28T14:49:31.007+06:00  INFO 24032 --- [InstagramLab] [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-28T14:49:31.009+06:00  INFO 24032 --- [InstagramLab] [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-10-28T14:51:58.764+06:00  INFO 24032 --- [InstagramLab] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-28T14:51:58.769+06:00  INFO 24032 --- [InstagramLab] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-28T14:51:58.796+06:00  INFO 24032 --- [InstagramLab] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-28T14:52:09.667+06:00  INFO 23068 --- [InstagramLab] [main] c.e.i.InstagramlabApplication            : Starting InstagramlabApplication using Java 21.0.2 with PID 23068 (C:\Users\User\Desktop\instagramlab\target\classes started by User in C:\Users\User\Desktop\instagramlab)
+2024-10-28T14:52:09.671+06:00  INFO 23068 --- [InstagramLab] [main] c.e.i.InstagramlabApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-10-28T14:52:11.056+06:00  INFO 23068 --- [InstagramLab] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-28T14:52:11.168+06:00  INFO 23068 --- [InstagramLab] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 98 ms. Found 4 JPA repository interfaces.
+2024-10-28T14:52:11.980+06:00  INFO 23068 --- [InstagramLab] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8089 (http)
+2024-10-28T14:52:12.001+06:00  INFO 23068 --- [InstagramLab] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-28T14:52:12.002+06:00  INFO 23068 --- [InstagramLab] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-28T14:52:12.094+06:00  INFO 23068 --- [InstagramLab] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-28T14:52:12.095+06:00  INFO 23068 --- [InstagramLab] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2355 ms
+2024-10-28T14:52:12.343+06:00  INFO 23068 --- [InstagramLab] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-28T14:52:12.848+06:00  INFO 23068 --- [InstagramLab] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:./db/instagram_lab user=ROOT
+2024-10-28T14:52:12.851+06:00  INFO 23068 --- [InstagramLab] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-28T14:52:12.940+06:00  INFO 23068 --- [InstagramLab] [main] liquibase.database                       : Set default schema name to PUBLIC
+2024-10-28T14:52:13.403+06:00  INFO 23068 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/001_create_table_user.yml
+2024-10-28T14:52:13.423+06:00  INFO 23068 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/002_create_table_roles.yml
+2024-10-28T14:52:13.427+06:00  INFO 23068 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/003_insert_into_roles_and_users_tables.sql
+2024-10-28T14:52:13.432+06:00  INFO 23068 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/004_create_table_posts.yaml
+2024-10-28T14:52:13.439+06:00  INFO 23068 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/005_delete_table.yaml
+2024-10-28T14:52:13.444+06:00  INFO 23068 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/006_create_new_table_posts.yaml
+2024-10-28T14:52:13.449+06:00  INFO 23068 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/007_add_column.yaml
+2024-10-28T14:52:13.453+06:00  INFO 23068 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/009_delete.yml.yml
+2024-10-28T14:52:13.456+06:00  INFO 23068 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/012_add_column_to_post.yml
+2024-10-28T14:52:13.460+06:00  INFO 23068 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/012_delete.yml.yml
+2024-10-28T14:52:13.463+06:00  INFO 23068 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/014_add_column.yml
+2024-10-28T14:52:13.466+06:00  INFO 23068 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/015_add_column.yml
+2024-10-28T14:52:13.468+06:00  INFO 23068 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/016_add_new_columns_to_users.yml
+2024-10-28T14:52:13.472+06:00  INFO 23068 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/017_add_new_column.yml
+2024-10-28T14:52:13.475+06:00  INFO 23068 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/018_delete.yml
+2024-10-28T14:52:13.477+06:00  INFO 23068 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/019_create.yml
+2024-10-28T14:52:13.481+06:00  INFO 23068 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/020_create.yml
+2024-10-28T14:52:13.486+06:00  INFO 23068 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/delete.sql
+2024-10-28T14:52:13.489+06:00  INFO 23068 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/insert3.sql
+2024-10-28T14:52:13.491+06:00  INFO 23068 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/insert5.sql
+2024-10-28T14:52:13.496+06:00  INFO 23068 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/instagramlab.zip
+2024-10-28T14:52:13.497+06:00  WARN 23068 --- [InstagramLab] [main] liquibase.changelog                      : included file db/changelog/initial/instagramlab.zip/db/changelog/initial/instagramlab.zip is not a recognized file type
+2024-10-28T14:52:13.718+06:00  INFO 23068 --- [InstagramLab] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2024-10-28T14:52:13.807+06:00  INFO 23068 --- [InstagramLab] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2024-10-28T14:52:13.809+06:00  INFO 23068 --- [InstagramLab] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2024-10-28T14:52:13.824+06:00  INFO 23068 --- [InstagramLab] [main] liquibase.util                           : UPDATE SUMMARY
+2024-10-28T14:52:13.824+06:00  INFO 23068 --- [InstagramLab] [main] liquibase.util                           : Run:                          0
+2024-10-28T14:52:13.824+06:00  INFO 23068 --- [InstagramLab] [main] liquibase.util                           : Previously run:              20
+2024-10-28T14:52:13.824+06:00  INFO 23068 --- [InstagramLab] [main] liquibase.util                           : Filtered out:                 0
+2024-10-28T14:52:13.825+06:00  INFO 23068 --- [InstagramLab] [main] liquibase.util                           : -------------------------------
+2024-10-28T14:52:13.825+06:00  INFO 23068 --- [InstagramLab] [main] liquibase.util                           : Total change sets:           20
+2024-10-28T14:52:13.826+06:00  INFO 23068 --- [InstagramLab] [main] liquibase.util                           : Update summary generated
+2024-10-28T14:52:13.853+06:00  INFO 23068 --- [InstagramLab] [main] liquibase.lockservice                    : Successfully released change log lock
+2024-10-28T14:52:13.855+06:00  INFO 23068 --- [InstagramLab] [main] liquibase.command                        : Command execution complete
+2024-10-28T14:52:13.990+06:00  INFO 23068 --- [InstagramLab] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-28T14:52:14.098+06:00  INFO 23068 --- [InstagramLab] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-28T14:52:14.156+06:00  INFO 23068 --- [InstagramLab] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-28T14:52:14.629+06:00  INFO 23068 --- [InstagramLab] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-28T14:52:16.231+06:00  INFO 23068 --- [InstagramLab] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-28T14:52:16.270+06:00  INFO 23068 --- [InstagramLab] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-28T14:52:16.993+06:00  WARN 23068 --- [InstagramLab] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-28T14:52:17.023+06:00  INFO 23068 --- [InstagramLab] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name authUserDetailsService
+2024-10-28T14:52:18.023+06:00  INFO 23068 --- [InstagramLab] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8089 (http) with context path '/'
+2024-10-28T14:52:18.040+06:00  INFO 23068 --- [InstagramLab] [main] c.e.i.InstagramlabApplication            : Started InstagramlabApplication in 9.132 seconds (process running for 10.268)
+2024-10-28T14:52:31.999+06:00  INFO 23068 --- [InstagramLab] [http-nio-8089-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-28T14:52:31.999+06:00  INFO 23068 --- [InstagramLab] [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-28T14:52:32.001+06:00  INFO 23068 --- [InstagramLab] [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-10-28T14:53:12.374+06:00  INFO 23068 --- [InstagramLab] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-28T14:53:12.379+06:00  INFO 23068 --- [InstagramLab] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-28T14:53:12.429+06:00  INFO 23068 --- [InstagramLab] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-28T14:53:21.588+06:00  INFO 8932 --- [InstagramLab] [main] c.e.i.InstagramlabApplication            : Starting InstagramlabApplication using Java 21.0.2 with PID 8932 (C:\Users\User\Desktop\instagramlab\target\classes started by User in C:\Users\User\Desktop\instagramlab)
+2024-10-28T14:53:21.591+06:00  INFO 8932 --- [InstagramLab] [main] c.e.i.InstagramlabApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-10-28T14:53:23.047+06:00  INFO 8932 --- [InstagramLab] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-28T14:53:23.162+06:00  INFO 8932 --- [InstagramLab] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 100 ms. Found 4 JPA repository interfaces.
+2024-10-28T14:53:24.168+06:00  INFO 8932 --- [InstagramLab] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8089 (http)
+2024-10-28T14:53:24.196+06:00  INFO 8932 --- [InstagramLab] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-28T14:53:24.197+06:00  INFO 8932 --- [InstagramLab] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-28T14:53:24.312+06:00  INFO 8932 --- [InstagramLab] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-28T14:53:24.313+06:00  INFO 8932 --- [InstagramLab] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2653 ms
+2024-10-28T14:53:24.593+06:00  INFO 8932 --- [InstagramLab] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-28T14:53:25.152+06:00  INFO 8932 --- [InstagramLab] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:./db/instagram_lab user=ROOT
+2024-10-28T14:53:25.155+06:00  INFO 8932 --- [InstagramLab] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-28T14:53:25.262+06:00  INFO 8932 --- [InstagramLab] [main] liquibase.database                       : Set default schema name to PUBLIC
+2024-10-28T14:53:25.737+06:00  INFO 8932 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/001_create_table_user.yml
+2024-10-28T14:53:25.756+06:00  INFO 8932 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/002_create_table_roles.yml
+2024-10-28T14:53:25.762+06:00  INFO 8932 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/003_insert_into_roles_and_users_tables.sql
+2024-10-28T14:53:25.766+06:00  INFO 8932 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/004_create_table_posts.yaml
+2024-10-28T14:53:25.774+06:00  INFO 8932 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/005_delete_table.yaml
+2024-10-28T14:53:25.778+06:00  INFO 8932 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/006_create_new_table_posts.yaml
+2024-10-28T14:53:25.785+06:00  INFO 8932 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/007_add_column.yaml
+2024-10-28T14:53:25.790+06:00  INFO 8932 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/009_delete.yml.yml
+2024-10-28T14:53:25.793+06:00  INFO 8932 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/012_add_column_to_post.yml
+2024-10-28T14:53:25.796+06:00  INFO 8932 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/012_delete.yml.yml
+2024-10-28T14:53:25.800+06:00  INFO 8932 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/014_add_column.yml
+2024-10-28T14:53:25.805+06:00  INFO 8932 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/015_add_column.yml
+2024-10-28T14:53:25.808+06:00  INFO 8932 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/016_add_new_columns_to_users.yml
+2024-10-28T14:53:25.813+06:00  INFO 8932 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/017_add_new_column.yml
+2024-10-28T14:53:25.817+06:00  INFO 8932 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/018_delete.yml
+2024-10-28T14:53:25.822+06:00  INFO 8932 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/019_create.yml
+2024-10-28T14:53:25.825+06:00  INFO 8932 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/020_create.yml
+2024-10-28T14:53:25.830+06:00  INFO 8932 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/delete.sql
+2024-10-28T14:53:25.833+06:00  INFO 8932 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/insert3.sql
+2024-10-28T14:53:25.836+06:00  INFO 8932 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/insert5.sql
+2024-10-28T14:53:25.840+06:00  INFO 8932 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/instagramlab.zip
+2024-10-28T14:53:25.840+06:00  WARN 8932 --- [InstagramLab] [main] liquibase.changelog                      : included file db/changelog/initial/instagramlab.zip/db/changelog/initial/instagramlab.zip is not a recognized file type
+2024-10-28T14:53:26.047+06:00  INFO 8932 --- [InstagramLab] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2024-10-28T14:53:26.143+06:00  INFO 8932 --- [InstagramLab] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2024-10-28T14:53:26.145+06:00  INFO 8932 --- [InstagramLab] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2024-10-28T14:53:26.160+06:00  INFO 8932 --- [InstagramLab] [main] liquibase.util                           : UPDATE SUMMARY
+2024-10-28T14:53:26.160+06:00  INFO 8932 --- [InstagramLab] [main] liquibase.util                           : Run:                          0
+2024-10-28T14:53:26.160+06:00  INFO 8932 --- [InstagramLab] [main] liquibase.util                           : Previously run:              20
+2024-10-28T14:53:26.160+06:00  INFO 8932 --- [InstagramLab] [main] liquibase.util                           : Filtered out:                 0
+2024-10-28T14:53:26.160+06:00  INFO 8932 --- [InstagramLab] [main] liquibase.util                           : -------------------------------
+2024-10-28T14:53:26.161+06:00  INFO 8932 --- [InstagramLab] [main] liquibase.util                           : Total change sets:           20
+2024-10-28T14:53:26.162+06:00  INFO 8932 --- [InstagramLab] [main] liquibase.util                           : Update summary generated
+2024-10-28T14:53:26.188+06:00  INFO 8932 --- [InstagramLab] [main] liquibase.lockservice                    : Successfully released change log lock
+2024-10-28T14:53:26.190+06:00  INFO 8932 --- [InstagramLab] [main] liquibase.command                        : Command execution complete
+2024-10-28T14:53:26.341+06:00  INFO 8932 --- [InstagramLab] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-28T14:53:26.443+06:00  INFO 8932 --- [InstagramLab] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-28T14:53:26.497+06:00  INFO 8932 --- [InstagramLab] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-28T14:53:27.074+06:00  INFO 8932 --- [InstagramLab] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-28T14:53:28.799+06:00  INFO 8932 --- [InstagramLab] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-28T14:53:28.839+06:00  INFO 8932 --- [InstagramLab] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-28T14:53:29.638+06:00  WARN 8932 --- [InstagramLab] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-28T14:53:29.726+06:00  INFO 8932 --- [InstagramLab] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name authUserDetailsService
+2024-10-28T14:53:30.942+06:00  INFO 8932 --- [InstagramLab] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8089 (http) with context path '/'
+2024-10-28T14:53:30.958+06:00  INFO 8932 --- [InstagramLab] [main] c.e.i.InstagramlabApplication            : Started InstagramlabApplication in 10.159 seconds (process running for 11.306)
+2024-10-28T14:53:36.113+06:00  INFO 8932 --- [InstagramLab] [http-nio-8089-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-28T14:53:36.114+06:00  INFO 8932 --- [InstagramLab] [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-28T14:53:36.116+06:00  INFO 8932 --- [InstagramLab] [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-10-28T14:54:26.825+06:00  INFO 8932 --- [InstagramLab] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-28T14:54:26.830+06:00  INFO 8932 --- [InstagramLab] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-28T14:54:26.834+06:00  INFO 8932 --- [InstagramLab] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-28T14:54:34.790+06:00  INFO 21600 --- [InstagramLab] [main] c.e.i.InstagramlabApplication            : Starting InstagramlabApplication using Java 21.0.2 with PID 21600 (C:\Users\User\Desktop\instagramlab\target\classes started by User in C:\Users\User\Desktop\instagramlab)
+2024-10-28T14:54:34.793+06:00  INFO 21600 --- [InstagramLab] [main] c.e.i.InstagramlabApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-10-28T14:54:36.157+06:00  INFO 21600 --- [InstagramLab] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-28T14:54:36.266+06:00  INFO 21600 --- [InstagramLab] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 95 ms. Found 4 JPA repository interfaces.
+2024-10-28T14:54:37.153+06:00  INFO 21600 --- [InstagramLab] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8089 (http)
+2024-10-28T14:54:37.174+06:00  INFO 21600 --- [InstagramLab] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-28T14:54:37.175+06:00  INFO 21600 --- [InstagramLab] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-28T14:54:37.257+06:00  INFO 21600 --- [InstagramLab] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-28T14:54:37.258+06:00  INFO 21600 --- [InstagramLab] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2396 ms
+2024-10-28T14:54:37.476+06:00  INFO 21600 --- [InstagramLab] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-28T14:54:37.931+06:00  INFO 21600 --- [InstagramLab] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:./db/instagram_lab user=ROOT
+2024-10-28T14:54:37.934+06:00  INFO 21600 --- [InstagramLab] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-28T14:54:38.010+06:00  INFO 21600 --- [InstagramLab] [main] liquibase.database                       : Set default schema name to PUBLIC
+2024-10-28T14:54:38.415+06:00  INFO 21600 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/001_create_table_user.yml
+2024-10-28T14:54:38.433+06:00  INFO 21600 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/002_create_table_roles.yml
+2024-10-28T14:54:38.438+06:00  INFO 21600 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/003_insert_into_roles_and_users_tables.sql
+2024-10-28T14:54:38.441+06:00  INFO 21600 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/004_create_table_posts.yaml
+2024-10-28T14:54:38.448+06:00  INFO 21600 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/005_delete_table.yaml
+2024-10-28T14:54:38.451+06:00  INFO 21600 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/006_create_new_table_posts.yaml
+2024-10-28T14:54:38.457+06:00  INFO 21600 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/007_add_column.yaml
+2024-10-28T14:54:38.460+06:00  INFO 21600 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/009_delete.yml.yml
+2024-10-28T14:54:38.463+06:00  INFO 21600 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/012_add_column_to_post.yml
+2024-10-28T14:54:38.466+06:00  INFO 21600 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/012_delete.yml.yml
+2024-10-28T14:54:38.469+06:00  INFO 21600 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/014_add_column.yml
+2024-10-28T14:54:38.472+06:00  INFO 21600 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/015_add_column.yml
+2024-10-28T14:54:38.475+06:00  INFO 21600 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/016_add_new_columns_to_users.yml
+2024-10-28T14:54:38.478+06:00  INFO 21600 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/017_add_new_column.yml
+2024-10-28T14:54:38.482+06:00  INFO 21600 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/018_delete.yml
+2024-10-28T14:54:38.484+06:00  INFO 21600 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/019_create.yml
+2024-10-28T14:54:38.487+06:00  INFO 21600 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/020_create.yml
+2024-10-28T14:54:38.492+06:00  INFO 21600 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/delete.sql
+2024-10-28T14:54:38.494+06:00  INFO 21600 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/insert3.sql
+2024-10-28T14:54:38.497+06:00  INFO 21600 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/insert5.sql
+2024-10-28T14:54:38.499+06:00  INFO 21600 --- [InstagramLab] [main] liquibase.changelog                      : Reading resource: db/changelog/initial/instagramlab.zip
+2024-10-28T14:54:38.500+06:00  WARN 21600 --- [InstagramLab] [main] liquibase.changelog                      : included file db/changelog/initial/instagramlab.zip/db/changelog/initial/instagramlab.zip is not a recognized file type
+2024-10-28T14:54:38.692+06:00  INFO 21600 --- [InstagramLab] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2024-10-28T14:54:38.796+06:00  INFO 21600 --- [InstagramLab] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2024-10-28T14:54:38.798+06:00  INFO 21600 --- [InstagramLab] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2024-10-28T14:54:38.813+06:00  INFO 21600 --- [InstagramLab] [main] liquibase.util                           : UPDATE SUMMARY
+2024-10-28T14:54:38.814+06:00  INFO 21600 --- [InstagramLab] [main] liquibase.util                           : Run:                          0
+2024-10-28T14:54:38.814+06:00  INFO 21600 --- [InstagramLab] [main] liquibase.util                           : Previously run:              20
+2024-10-28T14:54:38.814+06:00  INFO 21600 --- [InstagramLab] [main] liquibase.util                           : Filtered out:                 0
+2024-10-28T14:54:38.814+06:00  INFO 21600 --- [InstagramLab] [main] liquibase.util                           : -------------------------------
+2024-10-28T14:54:38.815+06:00  INFO 21600 --- [InstagramLab] [main] liquibase.util                           : Total change sets:           20
+2024-10-28T14:54:38.817+06:00  INFO 21600 --- [InstagramLab] [main] liquibase.util                           : Update summary generated
+2024-10-28T14:54:38.845+06:00  INFO 21600 --- [InstagramLab] [main] liquibase.lockservice                    : Successfully released change log lock
+2024-10-28T14:54:38.846+06:00  INFO 21600 --- [InstagramLab] [main] liquibase.command                        : Command execution complete
+2024-10-28T14:54:38.984+06:00  INFO 21600 --- [InstagramLab] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-28T14:54:39.075+06:00  INFO 21600 --- [InstagramLab] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-28T14:54:39.122+06:00  INFO 21600 --- [InstagramLab] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-28T14:54:39.586+06:00  INFO 21600 --- [InstagramLab] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-28T14:54:41.161+06:00  INFO 21600 --- [InstagramLab] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-28T14:54:41.207+06:00  INFO 21600 --- [InstagramLab] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-28T14:54:41.942+06:00  WARN 21600 --- [InstagramLab] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-28T14:54:41.973+06:00  INFO 21600 --- [InstagramLab] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name authUserDetailsService
+2024-10-28T14:54:42.928+06:00  INFO 21600 --- [InstagramLab] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8089 (http) with context path '/'
+2024-10-28T14:54:42.944+06:00  INFO 21600 --- [InstagramLab] [main] c.e.i.InstagramlabApplication            : Started InstagramlabApplication in 8.894 seconds (process running for 9.927)
+2024-10-28T14:54:49.663+06:00  INFO 21600 --- [InstagramLab] [http-nio-8089-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-28T14:54:49.663+06:00  INFO 21600 --- [InstagramLab] [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-28T14:54:49.665+06:00  INFO 21600 --- [InstagramLab] [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms

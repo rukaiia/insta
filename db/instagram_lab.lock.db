@@ -1,6 +1,6 @@
 #FileLock
-#Mon Oct 28 01:06:54 KGT 2024
-hostName=DESKTOP-2FQQIB1.lan
-id=192cf5fcaf182ccc4c1ae904426c4ff037d810e78fd
+#Mon Oct 28 14:54:37 KGT 2024
+hostName=DESKTOP-2FQQIB1
+id=192d25597352bca93c33e042b4b5e2602675c28920d
 method=file
-server=192.168.1.196\:56214
+server=192.168.36.9\:51354
