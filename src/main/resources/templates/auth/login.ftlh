@@ -2,37 +2,95 @@
 <@layout.layout ; spring>
 
     <section class="text-center text-lg-start">
+
         <style>
             body {
-                background-image: url('https://images.unsplash.com/photo-1511825300125-90c7a78b2e53?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwyMDg4NDB8MHwxfGFsbHwxfHx8fHx8fHwxNjEyMzIzNTI3&ixlib=rb-1.2.1&q=80&w=1080'); /* Замените URL на ваше изображение */
-                background-size: cover;
-                background-position: center;
+                background: linear-gradient(#d9a7c7, #fffcdc);
                 height: 100vh;
-                color: #ffffff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0;
+                color: #333;
+                font-family: Arial, sans-serif;
             }
 
             .card {
-                background-color: rgb(11, 79, 37);
+                background-color: rgba(255, 255, 255, 0.9);
                 border-radius: 20px;
                 backdrop-filter: blur(10px);
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+                width: 100%;
+                min-width: 400px;
+
+                padding: 60px 30px;
+                text-align: left;
             }
 
-            .form-outline {
-                margin-bottom: 1.5rem;
+            .card h1 {
+                font-size: 24px;
+                color: #333;
+                text-align: center;
+                margin-bottom: 20px;
             }
+
 
             .form-control {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 20px;
+                font-size: 16px;
+                color: #333;
+                border: 1px solid #B06AB3;
+                border-radius: 5px;
+                background-color: #ffffff;
+                box-sizing: border-box;
+            }
+
+            .form-control:focus {
+                outline: none;
+                border-color: #000000;
+                background-color: rgba(255, 255, 255, 0.95);
+            }
+
+
+            .form-label {
+                color: #555;
+                font-size: 14px;
+                margin-bottom: 5px;
+                display: block;
+            }
+
+            .btn-primary, .btn-secondary {
+                border: none;
                 border-radius: 10px;
-                background-color: rgba(255, 255, 255, 0.8);
+                padding: 12px;
+                font-size: 16px;
+                cursor: pointer;
+                transition: background-color 0.3s, transform 0.3s;
+                width: 100%;
+                margin: 15px 0;
+
             }
 
             .btn-primary {
-                transition: background-color 0.3s, transform 0.3s;
-                border-radius: 10px;
+                background-color: #7a0350;
+                color: #ffffff;
             }
 
             .btn-primary:hover {
-                background-color: #0b3969;
+                background-color: #8c2c68;
+                transform: scale(1.05);
+            }
+
+            .btn-secondary {
+                margin-top: 20px;
+                color: black;
+                margin-left: 150px;
+            }
+
+            .btn-secondary:hover {
+                color: #7a0350;
                 transform: scale(1.05);
             }
         </style>

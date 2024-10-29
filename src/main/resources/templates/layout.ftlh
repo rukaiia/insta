@@ -32,16 +32,15 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/posts/mypost">Profile</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/admin/adminpost">Create news</a>
+                    </li>
 
                 </ul>
             </div>
+            <a href="/news" class="btn btn-outline-info m-3">News</a>
 
-            <div class="collapse navbar-collapse justify-content-end">
-                <#assign known = SPRING_SECURITY_CONTEXT?? >
-
-
-
-                    <#if _csrf??>
+            <#if _csrf??>
                         <form action="/logout" method="post">
                             <input type="hidden" name="${(_csrf.parameterName)!'csrf'}"
                                    value="${(_csrf.token)!'--no-token--'}"/>

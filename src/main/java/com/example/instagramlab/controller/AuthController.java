@@ -6,6 +6,8 @@ import com.example.instagramlab.service.UserService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -81,5 +83,23 @@ public class AuthController {
         } else {
             return "auth/reset_password";
         }
+    }
+    @GetMapping("/lay")
+    public String someMethod(Model model, Authentication authentication) {
+        String profileUrl;
+
+        if (authentication != null && authentication.getPrincipal() instanceof UserDetails) {
+            UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+
+            boolean isAdmin = userDetails.getAuthorities().stream()
+                    .anyMatch(grantedAuthority -> grantedAuthority.getAuthority().equals("ROLE_ADMIN"));
+
+            profileUrl = isAdmin ? "/admin/adminpost" : "/posts/mypost";
+        } else {
+            profileUrl = "/auth/login";
+        }
+
+        model.addAttribute("profileUrl", profileUrl);
+        return "layout";
     }
 }

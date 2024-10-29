@@ -7,7 +7,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Мои Жалобы</title>
+        <title>Мои обьявления</title>
         <style>
             body {
                 background-color: #f0f0f0;
@@ -118,11 +118,11 @@
         </style>
     </head>
     <body>
-    <h1>Мои Жалобы</h1>
+    <h1>Мои обьявления</h1>
 
-    <#if posts?has_content>
+    <#if news?has_content>
         <div class="post-list">
-            <#list posts as post>
+            <#list news as post>
                 <div class="post-card">
                     <#if post.imagePath?has_content>
                         <img src="/uploads/${post.imagePath}" alt="Post Image">
@@ -130,16 +130,16 @@
                         <p>Изображение недоступно</p>
                     </#if>
                     <h2>${post.content}</h2>
-                    <p>Поддержек: ${post.likeCounts}</p>
+
                     <p>Создано: ${post.createdDate?string("dd-MM-yyyy HH:mm")}</p>
 
-                    <form action="/posts/delete" method="post">
+                    <form action="/news/delete" method="post">
                         <#if _csrf??>
                             <input type="hidden" name="${(_csrf.parameterName)!'csrf-param-name'}"
                                    value="${(_csrf.token)!'csrf-token'}"/>
                         </#if>
                         <input type="hidden" name="id" value="${post.id}" />
-                        <button type="submit">Удалить жалобу</button>
+                        <button type="submit">Удалить обьявление</button>
                     </form>
                 </div>
             </#list>
@@ -149,20 +149,20 @@
     </#if>
 
     <div class="form-container">
-        <form action="/posts/create" method="post" enctype="multipart/form-data">
+        <form action="/news/create" method="post" enctype="multipart/form-data">
             <#if _csrf??>
                 <input type="hidden" name="${(_csrf.parameterName)!'csrf-param-name'}"
                        value="${(_csrf.token)!'csrf-token'}"/>
             </#if>
-            <label for="content">Жалоба:</label>
+            <label for="content">Обьявление:</label>
             <textarea name="content" required></textarea>
             <label for="image">Выберите изображение:</label>
             <input type="file" name="image" accept="image/*">
-            <button type="submit">Добавить жалобу</button>
+            <button type="submit">Добавить обьявление</button>
         </form>
     </div>
 
-    <a href="/posts" class="back-link">Назад ко всем жалобам</a>
+    <a href="/news" class="back-link">Назад ко всем обьявлениям</a>
     </body>
     </html>
 </@layout.layout>

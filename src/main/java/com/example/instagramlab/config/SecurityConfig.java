@@ -39,11 +39,12 @@ public class SecurityConfig {
                 .logout(logout -> logout
                         .logoutRequestMatcher(new AntPathRequestMatcher("/logout")).permitAll())
                 .authorizeHttpRequests(authorizeRequests -> authorizeRequests
-                        .requestMatchers("/admin/register").permitAll()
+//                        .requestMatchers("/admin/register").permitAll()
                         .requestMatchers("/admin").hasAuthority("ROLE_ADMIN")
-                        .requestMatchers("/admin/**").hasAuthority("ROLE_ADMIN")
-
-
+                        .requestMatchers("/admin/adminposts").hasAuthority("ROLE_ADMIN")
+                        .requestMatchers("/news/create").hasAuthority("ROLE_ADMIN")
+                        .requestMatchers("/news/delete").hasAuthority("ROLE_ADMIN")
+                        .requestMatchers("/news").permitAll()
                         .requestMatchers("/posts/mypost").permitAll()
                         .requestMatchers("/auth/register").permitAll()
                         .requestMatchers("/comment","/posts/delete").permitAll()

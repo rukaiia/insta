@@ -7,7 +7,7 @@
     <title>Комментарии к посту</title>
     <style>
         body {
-            background-color: #FFFFFF;
+            background: linear-gradient(#d9a7c7, #fffcdc);
             color: #000000;
             font-family: Arial, sans-serif;
             margin: 0;
@@ -18,7 +18,7 @@
         }
 
         h2 {
-            color: #27AE60;
+            color: #000000;
             margin-bottom: 20px;
         }
 
@@ -30,7 +30,7 @@
         }
 
         h3 {
-            color: #27AE60;
+            color: #000000;
             margin-top: 30px;
             margin-bottom: 10px;
         }
@@ -44,11 +44,12 @@
         }
 
         li {
-            background-color: #E9F7EF;
+            background-color: #ffffff;
             border-radius: 10px;
             padding: 15px;
             margin: 10px 0;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            min-width: 650px;
         }
 
         form {
@@ -67,7 +68,7 @@
         }
 
         textarea, input[type="email"] {
-            width: 100%;
+            width: 95%;
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
@@ -75,7 +76,7 @@
         }
 
         button {
-            background-color: #27AE60;
+            background-color: #7a0350;
             color: white;
             border: none;
             border-radius: 5px;
@@ -85,13 +86,13 @@
         }
 
         button:hover {
-            background-color: #219150;
+            background-color: #8c2c68;
         }
 
         a {
             display: inline-block;
             margin-top: 20px;
-            color: #27AE60;
+            color: #7a0350;
             text-decoration: none;
         }
 

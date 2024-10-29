@@ -1,49 +1,114 @@
+
 <#import '../layout.ftlh' as layout>
 
 <@layout.layout ; spring>
     <style>
         body {
-            /*background-image: url('https://images.unsplash.com/photo-1511825300125-90c7a78b2e53?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwyMDg4NDB8MHwxfGFsbHwxfHx8fHx8fHwxNjEyMzIzNTI3&ixlib=rb-1.2.1&q=80&w=1080'); !* Замените URL на ваше изображение *!*/
-            /*background-size: cover;*/
-            /*background-position: center;*/
             height: 100vh;
-            color: #ffffff;
-            background: linear-gradient(#ff5e62, #ff9966);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            background: linear-gradient(#d9a7c7, #fffcdc);
+            font-family: Arial, sans-serif;
+            text-align: center;
         }
 
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
+            max-width: 600px;
+            padding: 20px;
+        }
 
         .card {
-            background-color: floralwhite;
+            background-color: #ffffff;
             border-radius: 15px;
-            backdrop-filter: blur(10px);
-            color: #121212;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            min-width: 400px;
+            padding: 10px 40px;
+            text-align: left;
+        }
+        .card h1 {
+            font-size: 24px;
+            font-weight: 600;
+        }
+        h1 {
+            text-align: center;
+        }
+        .mb-4 {
+            margin-bottom: 15px;
         }
 
-        .btn-primary {
-            transition: background-color 0.3s, transform 0.3s;
-        }
-
-        .btn-primary:hover {
-            background-color: #07284b;
-            transform: scale(1.05);
+        .mb-2 {
+            font-size: 14px;
+            color: #666666;
+            margin-bottom: 4px;
+            display: block;
         }
 
         .form-control {
-            border-radius: 10px;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #333;
+            border: 1px solid #B06AB3;
+            border-radius: 5px;
+            background-color: #ffffff;
+            box-sizing: border-box;
         }
-        .text-muted{
-            color: #250404;
 
+        .form-control:focus {
+            border-color: #000000;
+            outline: none;
+            background-color: #ffffff;
         }
-        .d-grid{
-            color: darkslategrey;
+
+        .btn-primary {
+            background-color: #8c2c68;
+            color: #ffffff;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #6a3458;
+        }
+
+        .text-muted {
+            color: #666;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .text-light {
+            color: #7a0350;
+            text-decoration: none;
+        }
+
+        .d-grid {
+            display: flex;
+            justify-content: center;
+            margin-top: 13px;
+            margin-bottom: 5px;
         }
     </style>
 
     <div class="container h-100 m-3">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-xl-8 col-md-10">
-                <h1 class="text-center mb-4">Регистрация</h1>
+
                 <div class="card shadow-lg p-4">
                     <div class="card-body">
                         <form action="/auth/register" method="post">
@@ -51,7 +116,7 @@
                                 <input type="hidden" name="${(_csrf.parameterName)!'csrf'}"
                                        value="${(_csrf.token)!'--no-token--'}"/>
                             </#if>
-
+                            <h1 class="text-center mb-4">Регистрация</h1>
                             <div class="mb-4">
                                 <h6 class="mb-2">Email</h6>
                                 <@spring.formInput "userDto.email" 'class="form-control form-control-lg"' />

@@ -12,7 +12,83 @@
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
             crossorigin="anonymous"></script>
     <title>Document</title>
+    <style>
+        body {
+            background: linear-gradient(#d9a7c7, #fffcdc);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 150px;
+            color: #333;
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            min-width: 400px;
+            padding: 60px 60px 60px 30px;
+            text-align: left;
+        }
+
+        .card h2 {
+            font-size: 24px;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: #333;
+            border: 1px solid #B06AB3;
+            border-radius: 5px;
+            background-color: #ffffff;
+            box-sizing: border-box;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #000000;
+            background-color: rgba(255, 255, 255, 0.95);
+        }
+
+        .btn-primary {
+            border: none;
+            border-radius: 10px;
+            padding: 12px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            width: 100%;
+            margin-top: 20px;
+
+        }
+
+        .btn-primary {
+            background-color: #7a0350;
+            color: #ffffff;
+            margin-left: 15px;
+        }
+
+        .btn-primary:hover {
+            background-color: #8c2c68;
+            transform: scale(1.05);
+        }
+
+        .text-danger {
+            color: red;
+        }
+    </style>
 </head>
+
 <body>
 
 <div class="py-5 h-100">
