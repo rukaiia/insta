@@ -9,7 +9,7 @@
         <title>Все Жалобы</title>
         <style>
             body {
-                background-color: #ffffff;
+                background: linear-gradient(#d9a7c7, #fffcdc);
                 color: #333333;
                 font-family: Arial, sans-serif;
                 margin: 0;
@@ -19,7 +19,7 @@
                 align-items: center;
             }
             h1 {
-                color: #0d4d0f;
+                color: black;
                 font-size: 2.5em;
                 margin-bottom: 20px;
                 text-align: center;
@@ -28,27 +28,29 @@
             .post-container {
                 display: flex;
                 flex-wrap: wrap;
-                gap: 20px;
+                column-gap: 40px;
+                row-gap: 60px;
                 justify-content: center;
                 max-width: 1200px;
                 width: 100%;
+                margin-top: 80px;
             }
             .post-card {
                 background-color: #f9f9f9;
                 border: 1px solid #e0e0e0;
                 border-radius: 8px;
                 padding: 20px;
-                width: 30%;
-                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+                width: 40%;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
                 transition: box-shadow 0.3s ease;
                 text-align: center;
             }
             .post-card:hover {
-                box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
             }
 
             h2 {
-                color: #195e1c;
+                color: rgb(0, 0, 0);
                 font-size: 1.5em;
                 margin: 0 0 10px 0;
             }
@@ -72,7 +74,7 @@
             }
 
             button {
-                background-color: #1e5420;
+                background-color: rgba(255, 0, 89, 0.33);
                 color: white;
                 padding: 10px 20px;
                 border: none;
@@ -82,18 +84,25 @@
                 transition: background-color 0.3s ease;
             }
             button:hover {
-                background-color: #29672b;
+                background-color: rgb(175, 55, 159);
             }
 
+
             a {
-                color: #0e5211;
+                color: rgb(0, 0, 0);
                 font-weight: bold;
                 text-decoration: none;
                 display: inline-block;
                 margin-top: 10px;
+
             }
             a:hover {
+                color: #7a0350;
                 text-decoration: underline;
+            }
+            .comments {
+                margin-left: 40px;
+                margin-right: 30px;
             }
             .pagination {
     margin: 20px 0;
@@ -120,7 +129,6 @@
         </style>
     </head>
     <body>
-    <h1>Город будущего</h1>
     <#if posts?has_content>
     <div class="post-container">
         <#list posts as post>
@@ -138,10 +146,11 @@
                     <#if _csrf??>
                         <input type="hidden" name="${(_csrf.parameterName)!'csrf-param-name'}" value="${(_csrf.token)!'csrf-token'}"/>
                     </#if>
-                    <button type="submit">👍 Поддержать</button>
+                    <button type="submit"> Поддержать</button>
                 </form>
                 <p id="like-count">${post.likeCounts} поддержки</p>
-                <a href="/posts/${post.user.id}/posts">Жалобы пользователя</a>
+                <a href="/posts/${post.id}/comments" class="comments">Посмотреть комментарии</a>
+                <a href="/posts/${post.user.id}/posts" class="users">Жалобы пользователя</a>
             </div>
         </#list>
     </div>

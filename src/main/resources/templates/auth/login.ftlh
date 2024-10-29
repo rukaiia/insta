@@ -21,10 +21,13 @@
                 backdrop-filter: blur(10px);
                 box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
                 width: 100%;
-                min-width: 400px;
+                max-width: 600px;
 
-                padding: 60px 30px;
+                padding: 60px 0;
                 text-align: left;
+                margin: 0  auto;
+
+
             }
 
             .card h1 {
@@ -61,7 +64,7 @@
                 display: block;
             }
 
-            .btn-primary, .btn-secondary {
+            .btn-primary {
                 border: none;
                 border-radius: 10px;
                 padding: 12px;
@@ -83,19 +86,21 @@
                 transform: scale(1.05);
             }
 
-            .btn-secondary {
+            .forget__password{
                 margin-top: 20px;
                 color: black;
-                margin-left: 150px;
+                text-decoration: none;
+                margin-left: 125px;
             }
 
-            .btn-secondary:hover {
+            .forget__password:hover {
+                text-decoration: underline;
                 color: #7a0350;
                 transform: scale(1.05);
             }
         </style>
 
-        <div class="card m-3">
+        <div class="card mr-5">
             <div class="row g-0 d-flex align-items-center h-100">
                 <div class="col-lg-8 mx-auto">
                     <div class="card-body py-5 px-md-3">
@@ -110,19 +115,21 @@
 
                             <!-- Email input -->
                             <div class="form-outline">
-                                <input type="email" id="form2Example1" class="form-control" name="username" required/>
                                 <label class="form-label" for="form2Example1">Email адрес</label>
+                                <input type="email" id="form2Example1" class="form-control" name="username" required/>
+
                             </div>
 
                             <!-- Password input -->
                             <div class="form-outline">
-                                <input type="password" id="form2Example2" class="form-control" name="password" required/>
                                 <label class="form-label" for="form2Example2">Пароль</label>
+                                <input type="password" id="form2Example2" class="form-control" name="password" required/>
+
                             </div>
 
                             <!-- Submit button -->
                             <button type="submit" class="btn btn-primary btn-block mb-4">Войти</button>
-                            <a href="/auth/forgot_password" class="btn btn-secondary btn-block mb-4">Забыли пароль?</a>
+                            <a href="/auth/forgot_password" class="forget__password ">Забыли пароль?</a>
                         </form>
                     </div>
                 </div>

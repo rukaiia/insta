@@ -18,7 +18,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-direction: column;
             width: 100%;
             max-width: 600px;
             padding: 20px;
@@ -29,9 +28,10 @@
             border-radius: 15px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             width: 100%;
-            min-width: 400px;
+            min-width: 600px;
             padding: 10px 40px;
             text-align: left;
+            margin-right: 300px;
         }
         .card h1 {
             font-size: 24px;
@@ -85,17 +85,6 @@
             background-color: #6a3458;
         }
 
-        .text-muted {
-            color: #666;
-            font-size: 14px;
-            text-align: center;
-            margin-top: 15px;
-        }
-
-        .text-light {
-            color: #7a0350;
-            text-decoration: none;
-        }
 
         .d-grid {
             display: flex;
@@ -147,10 +136,9 @@
 
                         </form>
                     </div>
+
                 </div>
-                <div class="text-center mt-4">
-                    <p class="text-muted">Уже есть аккаунт? <a href="/auth/login" class="text-light">Войти</a></p>
-                </div>
+
             </div>
         </div>
     </div>

@@ -10,16 +10,16 @@
         <title>Мои обьявления</title>
         <style>
             body {
-                background-color: #f0f0f0;
+                background: linear-gradient(#d9a7c7, #fffcdc);
                 color: #333;
                 font-family: Arial, sans-serif;
                 margin: 0;
                 padding: 0;
             }
             h1 {
-                color: #2f4f4f;
+                color: #000000;
                 text-align: center;
-                margin-top: 30px;
+                margin-top: 80px;
             }
             .post-list {
                 display: flex;
@@ -30,10 +30,11 @@
                 margin: 0;
             }
             .post-card {
+                margin-top: 50px;
                 background-color: #fff;
                 border: 1px solid #dcdcdc;
                 border-radius: 10px;
-                width: 300px;
+                width: 40%;
                 padding: 15px;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
                 display: flex;
@@ -47,7 +48,7 @@
                 margin-bottom: 10px;
             }
             .post-card h2 {
-                color: #2f4f4f;
+                color: #000000;
                 font-size: 18px;
                 margin-bottom: 10px;
             }
@@ -56,7 +57,7 @@
                 margin-bottom: 5px;
             }
             .post-card button {
-                background-color: #2f4f4f;
+                background-color: rgba(255, 0, 89, 0.33);
                 color: #fff;
                 border: none;
                 border-radius: 5px;
@@ -66,7 +67,7 @@
                 margin-top: 10px;
             }
             .post-card button:hover {
-                background-color: #1e3932;
+                background-color: #af379f;
             }
             .form-container {
                 background-color: #fff;
@@ -94,7 +95,7 @@
             }
             .form-container button {
                 width: 100%;
-                background-color: #2f4f4f;
+                background-color: rgba(255, 0, 89, 0.33);
                 color: #fff;
                 border: none;
                 border-radius: 5px;
@@ -103,12 +104,12 @@
                 transition: background-color 0.3s;
             }
             .form-container button:hover {
-                background-color: #1e3932;
+                background-color: #af379f;
             }
             .back-link {
                 display: block;
                 text-align: center;
-                color: #2f4f4f;
+                color: #000000;
                 margin: 20px 0;
                 text-decoration: none;
             }

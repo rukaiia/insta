@@ -9,7 +9,7 @@
         <title>Все Жалобы</title>
         <style>
             body {
-                background-color: #ffffff;
+                background: linear-gradient(#d9a7c7, #fffcdc);
                 color: #333333;
                 font-family: Arial, sans-serif;
                 margin: 0;
@@ -18,17 +18,14 @@
                 flex-direction: column;
                 align-items: center;
             }
-            h1 {
-                color: #0d4d0f;
-                font-size: 2.5em;
-                margin-bottom: 20px;
-                text-align: center;
-            }
+
 
             .post-container {
+                margin-top: 80px;
                 display: flex;
                 flex-wrap: wrap;
-                gap: 20px;
+                column-gap: 40px;
+                row-gap: 60px;
                 justify-content: center;
                 max-width: 1200px;
                 width: 100%;
@@ -38,17 +35,17 @@
                 border: 1px solid #e0e0e0;
                 border-radius: 8px;
                 padding: 20px;
-                width: 30%;
-                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+                width: 40%;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
                 transition: box-shadow 0.3s ease;
                 text-align: center;
             }
             .post-card:hover {
-                box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
             }
 
             h2 {
-                color: #195e1c;
+                color: #000000;
                 font-size: 1.5em;
                 margin: 0 0 10px 0;
             }
@@ -72,7 +69,7 @@
             }
 
             button {
-                padding: 10px 20px;
+                padding: 8px 13px;
                 border: none;
                 border-radius: 5px;
                 cursor: pointer;
@@ -81,10 +78,11 @@
                 color: white;
             }
             .accept-btn {
-                background-color: #28a745;
+                background-color: #215629;
+                margin-right: 10px;
             }
             .reject-btn {
-                background-color: #dc3545;
+                background-color: #790612;
             }
             .selected {
                 background-color: #6c757d;
@@ -92,10 +90,13 @@
             }
 
             a {
-                color: #0e5211;
+                color: rgba(255, 0, 89, 0.33);
                 font-weight: bold;
                 text-decoration: none;
                 display: inline-block;
+                margin-top: 10px;
+            }
+            p {
                 margin-top: 10px;
             }
             a:hover {
@@ -125,7 +126,6 @@
         </style>
     </head>
     <body>
-    <h1>Город будущего</h1>
     <h3>Aдминистрация</h3>
     <#if posts?has_content>
         <div class="post-container">

@@ -6,7 +6,7 @@
     <title>Посты пользователя</title>
     <style>
         body {
-            background-color: #FFFFFF;
+            background: linear-gradient(#d9a7c7, #fffcdc);
             color: #333333;
             font-family: Arial, sans-serif;
             margin: 0;
@@ -28,7 +28,8 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
+            column-gap: 40px;
+            row-gap: 60px;
         }
 
         li {
@@ -40,7 +41,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
             transition: transform 0.2s, box-shadow 0.2s;
         }
 
@@ -65,7 +66,7 @@
         }
 
         a {
-            color: #1E90FF;
+            color: rgba(255, 0, 89, 0.33);
             text-decoration: none;
             font-weight: bold;
             text-align: center;
@@ -85,7 +86,7 @@
             display: block;
             text-align: center;
             margin-top: 20px;
-            color: #27AE60;
+            color: #000000;
             font-weight: bold;
         }
 
@@ -108,7 +109,7 @@
                     <p>Изображение недоступно</p>
                 </#if>
                 <p id="like-count">${post.likeCounts} лайков</p>
-                <a href="/posts/${post.id}">Посмотреть пост</a>
+<#--                <a href="/posts/${post.id}">Посмотреть пост</a>-->
             </li>
         </#list>
     </ul>

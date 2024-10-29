@@ -18,8 +18,39 @@
         <title>Document</title>
     </head>
     <body>
+    <style>
+        .navbar {
+            background-color: whitesmoke;
+            backdrop-filter: blur(5px);
+        }
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: black;
+        }
+        .nav-link{
+            color: black;
+            font-size: 20px;
+        }
+        .nav-link:hover {
+            color: #7a0350;
+        }
+        .btn-outline-info {
+            color: black;
+            border-color: black;
+        }
+        .btn-outline-info:hover {
+            color: #FFFFFF;
+            background-color: #7a0350;
+        }
+        .container{
+            margin-top: 70px;
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top mb-2">
+        }
+
+    </style>
+
+    <nav class="navbar navbar-expand-lg   fixed-top mb-2">
         <div class="container-fluid">
             <a class="navbar-brand" href="/posts">FUTURE</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"

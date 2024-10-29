@@ -70,12 +70,10 @@ public class AdminController {
     @GetMapping("/adminpost")
     public String myPosts(Model model) {
         try {
-            // Получаем аутентификацию текущего пользователя
             Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 
             if (principal instanceof UserDetails) {
                 UserDetails userDetails = (UserDetails) principal;
-                // Проверяем, имеет ли пользователь роль администратора
                 if (userDetails.getAuthorities().stream().anyMatch(a -> a.getAuthority().equals("ROLE_ADMIN"))) {
                     User user = userService.getUserByEmail(userDetails.getUsername());
                     List<NewsDto> postList = newsService.getPostsOfUser(user.getId());

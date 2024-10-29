@@ -46,8 +46,6 @@ public class PostService {
     }
 
 
-
-
     public User getCurrentUser() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         if (authentication != null && authentication.isAuthenticated()) {
@@ -130,12 +128,7 @@ public class PostService {
         postRepository.save(existingPost);
     }
 
-//    @Transactional
-//    public void updatePostStatus(Long postId, String status) {
-//        Post post = postRepository.findById(postId).orElseThrow(() -> new RuntimeException("Post not found"));
-//        post.setStatus(status);
-//        postRepository.save(post);
-//    }
+
 
 
     @Transactional

@@ -143,11 +143,11 @@
     </#if>
     <label for="content">Контент:</label>
     <textarea name="content" required></textarea>
-    <label for="email">Email:</label>
-    <input type="email" name="email" required>
+<#--    <label for="email">Email:</label>-->
+<#--    <input type="email" name="email" required>-->
     <button type="submit">Добавить комментарий</button>
 </form>
 
-<a href="/posts/${post.id}">Назад</a>
+<a href="/posts">Назад</a>
 </body>
 </html>
